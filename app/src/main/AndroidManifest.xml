@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BreakfastForce">
         <activity
+            android:name=".diagnosis"
+            android:exported="false" />
+        <activity
             android:name=".Fragment3"
             android:exported="false" />
         <activity
