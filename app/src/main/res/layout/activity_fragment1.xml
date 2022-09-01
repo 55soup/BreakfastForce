@@ -7,10 +7,15 @@
     android:background="@android:color/holo_blue_bright"
     tools:context=".Fragment1">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="트윙크"
+         android:textStyle="bold"
+         android:textSize="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="첫 번째" />
 
 </LinearLayout>
