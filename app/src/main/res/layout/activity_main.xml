@@ -24,6 +24,6 @@
         app:itemBackground="@color/colorPrimary"
         app:itemIconTint="#FFFFFF"
         app:itemTextColor="@color/black"
-        app:menu="@menu/bottom_tab" />
+        app:menu="@menu/bottom_tab"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
