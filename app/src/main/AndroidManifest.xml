@@ -10,6 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BreakfastForce">
         <activity
+<<<<<<< HEAD
+            android:name=".Fragment4"
+=======
+            android:name=".LoginActivity"
+>>>>>>> a1354c8245531b2ce837724fbed82f00c54e7470
+            android:exported="false" />
+        <activity
+            android:name=".diagnosis"
+            android:exported="false" />
+        <activity
+            android:name=".Fragment3"
+            android:exported="false" />
+        <activity
+            android:name=".Fragment2"
+            android:exported="false" />
+        <activity
+            android:name=".Fragment1"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
