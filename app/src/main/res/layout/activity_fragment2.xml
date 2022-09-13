@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@android:color/holo_orange_light"
     android:padding="10dp"
     tools:context=".Fragment2">
 
@@ -19,7 +18,7 @@
         <TableRow>
             <Button
                 android:src="@drawable/fruit"
-               android:background="@drawable/rect"
+                android:background="@drawable/rect"
                 android:layout_height="170dp"
                 android:layout_weight="1"
                 android:layout_margin="10dp"
@@ -56,6 +55,7 @@
         <TableRow>
             <Button
                 android:background="@drawable/round_btn"
+                android:layout_height="40dp"
                 android:text="#주먹밥" />
             <Button
                 android:background="@drawable/round_btn"

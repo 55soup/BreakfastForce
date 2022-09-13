@@ -5,22 +5,22 @@
         android:enabled="true"
         app:showAsAction="ifRoom"
         android:title="일기"
-        android:icon="@android:drawable/ic_menu_edit" />
+        android:icon="@drawable/ic_pencil"/>
 
     <item android:id="@+id/tab2"
         app:showAsAction="ifRoom"
         android:title="레시피"
-        android:icon="@android:drawable/ic_menu_edit" />
+        android:icon="@drawable/ic_chef" />
 
     <item android:id="@+id/tab3"
         app:showAsAction="ifRoom"
         android:title="아침알람"
-        android:icon="@android:drawable/ic_lock_idle_alarm" />
+        android:icon="@drawable/ic_clock" />
 
     <item android:id="@+id/tab4"
         app:showAsAction="ifRoom"
         android:title="정보"
-        android:icon="@android:drawable/ic_input_get" />
+        android:icon="@drawable/ic_agenda"/>
 
-<!--    showAsAction : ifRoom: 액션 아이템을 표시할 수 있는 공간이 있다면 액션 아이템을 표시함-->
+    <!--    showAsAction : ifRoom: 액션 아이템을 표시할 수 있는 공간이 있다면 액션 아이템을 표시함-->
 </menu>
