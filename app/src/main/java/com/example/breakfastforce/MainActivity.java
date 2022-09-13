@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
     Fragment1 fragment1;
     Fragment2 fragment2;
     Fragment3 fragment3;
+    Fragment4 fragment4;
+    LoginActivity loginActivity;
     ImageView mainImg;
 
     @Override
@@ -25,9 +27,8 @@ public class MainActivity extends AppCompatActivity {
         fragment1 = new Fragment1();
         fragment2 = new Fragment2();
         fragment3 = new Fragment3();
-
-        mainImg.setClipToOutline(true);
-
+        fragment4 = new Fragment4();
+        loginActivity = new LoginActivity();
 
         getSupportFragmentManager().beginTransaction().replace(R.id.container,fragment1).commit();
 

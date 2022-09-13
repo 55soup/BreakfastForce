@@ -1,33 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.breakfastforce">
 
     <application
+
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BreakfastForce">
-        <activity
-<<<<<<< HEAD
-            android:name=".Fragment4"
-=======
-            android:name=".LoginActivity"
->>>>>>> a1354c8245531b2ce837724fbed82f00c54e7470
-            android:exported="false" />
+
+<!--        시작 페이지 -> LoginActivity-->
+
+<!--        <activity android:name=".LoginActivity"-->
+<!--            android:theme="@style/Theme.AppCompat.Light.NoActionBar"-->
+<!--            android:exported="true">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN"/>-->
+<!--                <category android:name="android.intent.category.LAUNCHER"/>-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+
         <activity
             android:name=".diagnosis"
             android:exported="false" />
         <activity
-            android:name=".Fragment3"
-            android:exported="false" />
+            android:name=".Fragment1"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".Fragment2"
-            android:exported="false" />
+            android:exported="false"
+            tools:ignore="Instantiatable" />
         <activity
-            android:name=".Fragment1"
-            android:exported="false" />
+            android:name=".Fragment3"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".Fragment4"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
