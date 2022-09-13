@@ -17,20 +17,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TableRow>
-<<<<<<< HEAD
-            <Button
-                android:src="@drawable/fruit"
-                android:background="@drawable/rect"
-                android:layout_height="170dp"
-                android:layout_weight="1"
-                android:layout_margin="10dp"
-                android:text="샌드위치"/>
-            <Button
-                android:background="@drawable/rect"
-                android:layout_height="170dp"
-                android:layout_weight="1"
-                android:layout_margin="10dp"/>
-=======
             <FrameLayout
                 android:layout_weight="1">
                 <ImageButton
@@ -75,7 +61,6 @@
                     android:text="그릭요거트"
                     android:textColor="#FFFFFF"/>
             </FrameLayout>
->>>>>>> a1354c8245531b2ce837724fbed82f00c54e7470
         </TableRow>
         <TableRow>
             <FrameLayout
@@ -139,18 +124,11 @@
                 android:text="#채소"
                 android:textSize="10dp"
                 android:background="@drawable/round_btn"
-<<<<<<< HEAD
-                android:layout_height="40dp"
-                android:text="#주먹밥" />
+                android:layout_height="40dp" />
             <Button
                 android:background="@drawable/round_btn"
                 android:layout_marginLeft="10dp"
                 android:text="#주먹밥" />
-
-
-=======
-                android:layout_height="30dp" />
->>>>>>> a1354c8245531b2ce837724fbed82f00c54e7470
         </TableRow>
     </TableLayout>
 
