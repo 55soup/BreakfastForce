@@ -27,8 +27,4 @@
     android:layout_height="wrap_content"
     android:text="8시로 알림 설정하기"
     android:layout_gravity="center" />
-<<<<<<< HEAD
-=======
-
->>>>>>> f9242ec82c719efc3f12a80ca83a1f267bbd3af9
 </LinearLayout>
