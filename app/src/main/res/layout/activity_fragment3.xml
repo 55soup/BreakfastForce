@@ -28,25 +28,4 @@
     android:text="8시로 알림 설정하기"
     android:layout_gravity="center" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="언제 일어나시나요?"
-        android:textSize="25dp"
-        android:textColor="#000000"/>
-    <TimePicker
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="아침을 오전 8시에\n 먹는 것이 좋아요!"
-        android:textSize="25dp"
-        android:textColor="#000000"/>
-    <Button
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="8시로 알림 설정하기"
-        android:layout_gravity="center" />
 </LinearLayout>

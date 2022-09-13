@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.breakfastforce">
 
     <application
@@ -10,24 +11,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BreakfastForce">
         <activity
-<<<<<<< HEAD
-            android:name=".Fragment4"
-=======
+            android:name=".InfopageActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
->>>>>>> a1354c8245531b2ce837724fbed82f00c54e7470
             android:exported="false" />
         <activity
             android:name=".diagnosis"
             android:exported="false" />
         <activity
-            android:name=".Fragment3"
-            android:exported="false" />
+            android:name=".Fragment1"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".Fragment2"
-            android:exported="false" />
+            android:exported="false"
+            tools:ignore="Instantiatable" />
         <activity
-            android:name=".Fragment1"
-            android:exported="false" />
+            android:name=".Fragment3"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".Fragment4"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

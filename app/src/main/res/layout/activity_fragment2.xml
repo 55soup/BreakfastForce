@@ -41,13 +41,15 @@
             </FrameLayout>
             <FrameLayout
                 android:layout_weight="1">
+
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="170dp"
-                    android:src="@drawable/yogurt_bowl"
+                    android:layout_margin="10dp"
                     android:background="@drawable/rect"
                     android:backgroundTint="#4D000000"
-                    android:layout_margin="10dp"  />
+                    android:src="@drawable/yogurt_bowl"
+                    tools:ignore="DuplicateClickableBoundsCheck" />
                 <ImageButton
                     android:layout_width="170dp"
                     android:layout_height="170dp"

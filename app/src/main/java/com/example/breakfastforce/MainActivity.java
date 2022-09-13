@@ -26,9 +26,6 @@ public class MainActivity extends AppCompatActivity {
         fragment2 = new Fragment2();
         fragment3 = new Fragment3();
 
-        mainImg.setClipToOutline(true);
-
-
         getSupportFragmentManager().beginTransaction().replace(R.id.container,fragment1).commit();
 
         BottomNavigationView bottomNavigation = findViewById(R.id.bottom_navigation);
