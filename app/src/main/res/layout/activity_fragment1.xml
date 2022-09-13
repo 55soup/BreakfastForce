@@ -41,5 +41,64 @@
         android:background="@drawable/rect"
         android:layout_gravity="center"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="오늘 7월 6일"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:id="@+id/date"/>
+
+    <TextView
+        android:layout_width="340dp"
+        android:layout_height="30dp"
+        android:padding="8dp"
+        android:text="샌드위치 ,샐러드, 오렌지 주스"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:textSize="11dp"
+        android:background="@drawable/round_btn"
+        android:backgroundTint="#80F0D158"
+        android:id="@+id/meal"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="내용"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:id="@+id/cotent"/>
+
+    <TextView
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="평소에 내가 늦잠을 많이 자기도 하고 아침에 분주해서 아침을 안 먹었더니만 오전 수업 때 배가
+너무 고파서 수업 내내 꼬르륵 소리가 났다 ㅜㅜ 친구들이 쳐다봐서 부끄러웠다. 그래서 오늘은
+밥을 챙겨먹으려고 어제 엄마랑 같이 장보러 갔다! 엄마가 “네가 웬일이냐 밥을 다 먹고?” ㅋㅋ
+내가 너무 안 먹긴했나보다 이제부터 꼬박꼬박 이 앱에 자가진단이랑 식단 기록, 일기 기록을
+해야겠다. 최근에 뉴스를 봤는데 아침을 안 먹으면 집중력이 떨어진다나... 맞는 말인 것 같다.
+수업 때 배고파서 집중이 안되었기 때문에... ㅋㅋ 내 친구들도 잘 안 먹고 오던데 이 앱을 추천해
+주면 아침을 꼬박꼬박 잘 먹겠지?? 이따 톡해봐야겠다.
+아!!! 그리구 샌드위치에 키위 소스를 넣어서 새콤달콤하게 만들었다. 샐러드에 치커리도 넣었는
+데 의외로 맛있어서 놀랐다. 씁쓸한 것이 혀에 확 도는데 왜 이제껏 편식했나 후회가 살짝 된다.
+오늘은 비건체험을 한 것 같다. 생각보다 나쁘지 않구... 지구온난화 때문에 육식을 그만해야 한
+다던데 할 수 있다면 비건 권장을 하고 싶다!"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        android:background="@drawable/round_btn"
+        android:backgroundTint="#40FFF8BA"
+        android:id="@+id/dateCotent"/>
+
+
 
 </LinearLayout>
