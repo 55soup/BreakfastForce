@@ -27,8 +27,11 @@ public class MainActivity extends AppCompatActivity {
         fragment1 = new Fragment1();
         fragment2 = new Fragment2();
         fragment3 = new Fragment3();
+<<<<<<< HEAD
         fragment4 = new Fragment4();
         loginActivity = new LoginActivity();
+=======
+>>>>>>> f9242ec82c719efc3f12a80ca83a1f267bbd3af9
 
         getSupportFragmentManager().beginTransaction().replace(R.id.container,fragment1).commit();
 

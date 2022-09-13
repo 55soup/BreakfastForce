@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BreakfastForce">
+<<<<<<< HEAD
 
 <!--        시작 페이지 -> LoginActivity-->
 
@@ -23,6 +24,14 @@
 <!--            </intent-filter>-->
 <!--        </activity>-->
 
+=======
+        <activity
+            android:name=".InfopageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+>>>>>>> f9242ec82c719efc3f12a80ca83a1f267bbd3af9
         <activity
             android:name=".diagnosis"
             android:exported="false" />
