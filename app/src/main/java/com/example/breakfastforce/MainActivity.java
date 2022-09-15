@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     Fragment1 fragment1;
     Fragment2 fragment2;
     Fragment3 fragment3;
+    Fragment4 fragment4;
     InfopageActivity infopageActivity;
     LoginActivity loginActivity;
     ImageView mainImg;
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         fragment1 = new Fragment1();
         fragment2 = new Fragment2();
         fragment3 = new Fragment3();
+        fragment4 = new Fragment4();
         infopageActivity = new InfopageActivity();
         loginActivity = new LoginActivity();
 
@@ -54,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
                     case R.id.tab4:
                         Toast.makeText(getApplicationContext(),"네번째",Toast.LENGTH_SHORT).show();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container,infopageActivity).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container,fragment4).commit();
                         return true;
                 }
                 return false;
