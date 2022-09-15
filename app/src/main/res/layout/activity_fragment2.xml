@@ -27,6 +27,7 @@
                     android:backgroundTint="#4D000000"
                     android:layout_margin="10dp"  />
                 <ImageButton
+                    android:id="@+id/btn_sandwich"
                     android:layout_width="170dp"
                     android:layout_height="170dp"
                     android:layout_margin="10dp"
@@ -51,6 +52,7 @@
                     android:src="@drawable/yogurt_bowl"
                     tools:ignore="DuplicateClickableBoundsCheck" />
                 <ImageButton
+                    android:id="@+id/btn_yogurt"
                     android:layout_width="170dp"
                     android:layout_height="170dp"
                     android:layout_margin="10dp"
@@ -75,6 +77,7 @@
                     android:backgroundTint="#4D000000"
                     android:layout_margin="10dp"  />
                 <ImageButton
+                    android:id="@+id/btn_salad"
                     android:layout_width="170dp"
                     android:layout_height="170dp"
                     android:layout_margin="10dp"
@@ -97,6 +100,7 @@
                     android:backgroundTint="#4D000000"
                     android:layout_margin="10dp"  />
                 <ImageButton
+                    android:id="@+id/btn_riceBowl"
                     android:layout_width="170dp"
                     android:layout_height="170dp"
                     android:layout_margin="10dp"
