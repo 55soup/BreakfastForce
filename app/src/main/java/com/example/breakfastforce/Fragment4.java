@@ -21,5 +21,4 @@ public class Fragment4 extends Fragment {
         return inflater.inflate(R.layout.activity_fragment4, container, false);
 
     }
-
 }
