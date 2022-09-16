@@ -16,10 +16,7 @@ public class MainActivity extends AppCompatActivity {
     Fragment2 fragment2;
     Fragment3 fragment3;
     Fragment4 fragment4;
-<<<<<<< HEAD
     InfopageActivity infopageActivity;
-=======
->>>>>>> 6e3fe4fd412c66b3aae2d62c9e7985b38b3cae7e
     LoginActivity loginActivity;
     ImageView mainImg;
 
@@ -32,10 +29,6 @@ public class MainActivity extends AppCompatActivity {
         fragment2 = new Fragment2();
         fragment3 = new Fragment3();
         fragment4 = new Fragment4();
-<<<<<<< HEAD
-        infopageActivity = new InfopageActivity();
-=======
->>>>>>> 6e3fe4fd412c66b3aae2d62c9e7985b38b3cae7e
         loginActivity = new LoginActivity();
 
         getSupportFragmentManager().beginTransaction().replace(R.id.container,fragment1).commit();
