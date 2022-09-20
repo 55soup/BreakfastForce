@@ -4,28 +4,24 @@
     package="com.example.breakfastforce">
 
     <application
-
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BreakfastForce">
-
-<!--        시작 페이지 -> LoginActivity-->
-
-<!--        <activity android:name=".LoginActivity"-->
-<!--            android:theme="@style/Theme.AppCompat.Light.NoActionBar"-->
-<!--            android:exported="true">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN"/>-->
-<!--                <category android:name="android.intent.category.LAUNCHER"/>-->
-<!--            </intent-filter>-->
-<!--        </activity>-->
-
         <activity
-            android:name=".InfopageActivity"
+            android:name=".Fragment1DiaryActivity"
             android:exported="false" />
+        <!-- 시작 페이지 -> LoginActivity -->
+        <!-- <activity android:name=".LoginActivity" -->
+        <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar" -->
+        <!-- android:exported="true"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN"/> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
