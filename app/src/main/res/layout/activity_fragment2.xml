@@ -20,12 +20,13 @@
             <FrameLayout
                 android:layout_weight="1">
                 <ImageButton
+                    android:id="@+id/test"
                     android:layout_width="wrap_content"
                     android:layout_height="170dp"
                     android:src="@drawable/sandwich"
                     android:background="@drawable/rect"
                     android:backgroundTint="#4D000000"
-                    android:layout_margin="10dp"  />
+                    android:layout_margin="10dp"/>
                 <ImageButton
                     android:id="@+id/btn_sandwich"
                     android:layout_width="170dp"
