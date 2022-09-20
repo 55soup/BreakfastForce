@@ -16,13 +16,7 @@ public class MainActivity extends AppCompatActivity {
     Fragment2 fragment2;
     Fragment3 fragment3;
     Fragment4 fragment4;
-<<<<<<< HEAD
-
-=======
-    InfopageActivity infopageActivity;
->>>>>>> e8580a9b785f9448165693f305c1d0eda3c0a129
     LoginActivity loginActivity;
-    ImageView mainImg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,10 +27,6 @@ public class MainActivity extends AppCompatActivity {
         fragment2 = new Fragment2();
         fragment3 = new Fragment3();
         fragment4 = new Fragment4();
-<<<<<<< HEAD
-
-=======
->>>>>>> e8580a9b785f9448165693f305c1d0eda3c0a129
         loginActivity = new LoginActivity();
 
         getSupportFragmentManager().beginTransaction().replace(R.id.container,fragment1).commit();
