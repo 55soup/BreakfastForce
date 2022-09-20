@@ -41,7 +41,7 @@
             android:exported="false"
             tools:ignore="Instantiatable" />
         <activity
-            android:name=".InfopageActivity"
+            android:name=".Fragment4"
             android:exported="false"
             tools:ignore="Instantiatable" />
         <activity
