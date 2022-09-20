@@ -13,7 +13,8 @@
         android:orientation="vertical"
         android:padding="10dp"
         android:background="@android:color/white"
-        tools:context=".Fragment1">
+        tools:context=".Fragment1"
+        android:layout_marginBottom="50dp">
 
         <LinearLayout
             android:orientation="vertical"

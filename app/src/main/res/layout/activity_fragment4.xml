@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Fragment4">
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/toast_egg"/>
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="트윙크님을 위한\n 아침먹는 습관 기르기에 관련된 글이에요!"/>
-
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/toast_egg"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="트윙크님을 위한\n 아침먹는 습관 기르기에 관련된 글이에요!"/>
+    </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
@@ -25,8 +28,8 @@
         android:layout_marginBottom="70dp"
         android:layout_marginRight="30dp"
         app:backgroundTint="#FFF8BA"
-        android:src="@drawable/edit">
+        android:src="@drawable/ic_agenda">
 
     </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-</LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
