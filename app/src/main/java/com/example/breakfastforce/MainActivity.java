@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     Fragment2 fragment2;
     Fragment3 fragment3;
     Fragment4 fragment4;
+
+    InfopageActivity infopageActivity;
     LoginActivity loginActivity;
 
     @Override
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         fragment2 = new Fragment2();
         fragment3 = new Fragment3();
         fragment4 = new Fragment4();
+
         loginActivity = new LoginActivity();
 
         getSupportFragmentManager().beginTransaction().replace(R.id.container,fragment1).commit();

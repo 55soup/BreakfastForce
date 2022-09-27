@@ -115,7 +115,19 @@
         </LinearLayout>
 
     </ScrollView>
-
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/toast_egg"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="트윙크님을 위한\n 아침먹는 습관 기르기에 관련된 글이에요!"/>
+    </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
@@ -126,6 +138,7 @@
         android:layout_marginRight="30dp"
         app:backgroundTint="#FFF8BA"
         android:src="@drawable/bookmark">
+
 
     </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
