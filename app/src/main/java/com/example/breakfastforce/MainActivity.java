@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
     Fragment2 fragment2;
     Fragment3 fragment3;
     Fragment4 fragment4;
-    Fragment2DetailActivty fragment2DetailActivty;
 
     InfopageActivity infopageActivity;
     LoginActivity loginActivity;

@@ -66,7 +66,9 @@ public class Fragment2 extends Fragment {
         btn_sandwich.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment2DetailActivty).commit();
+                Intent intent = new Intent(getActivity().getApplication(), RecipePageActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(intent);
             }
         });
         return v; //반드시 추가!
