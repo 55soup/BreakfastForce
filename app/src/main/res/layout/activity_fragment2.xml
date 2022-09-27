@@ -167,7 +167,7 @@
                     <ImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/tag_btn"
+                        android:src="@drawable/tag_btn2"
                         android:background="#00000000"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -176,6 +176,23 @@
                         android:textSize="10dp"
                         android:textColor="@color/black"
                         android:text="#샐러드" />
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp">
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/tag_btn3"
+                        android:background="#00000000"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textSize="10dp"
+                        android:textColor="@color/black"
+                        android:text="#샌드위치" />
                 </FrameLayout>
             </TableRow>
         </TableLayout>
