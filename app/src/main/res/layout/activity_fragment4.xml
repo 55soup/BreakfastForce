@@ -3,9 +3,118 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".Fragment4">
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        tools:context=".Fragment1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:layout_width="430dp"
+                    android:layout_height="280dp"
+                    android:src="@drawable/toast_egg"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp">
+
+                    <TextView
+                        android:id="@+id/userName_Frame"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="아침,"
+                        android:textColor="#E3E3E3"
+                        android:textSize="30dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:text="왜 거르면 안되나요?"
+                        android:textColor="#E3E3E3"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:text="식문화 전문가 김땡땡박사"
+                        android:textColor="#B3B3B3"
+                        android:textSize="10dp" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="트윙크"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:id="@+id/userName"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="님을 위한"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="17dp"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="아침먹는 습관 기르기"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="에 관련된 글이에요!"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="17dp"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,7 +137,8 @@
         android:layout_marginBottom="70dp"
         android:layout_marginRight="30dp"
         app:backgroundTint="#FFF8BA"
-        android:src="@drawable/ic_agenda">
+        android:src="@drawable/bookmark">
+
 
     </com.google.android.material.floatingactionbutton.FloatingActionButton>
 

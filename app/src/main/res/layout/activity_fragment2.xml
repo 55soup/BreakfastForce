@@ -14,13 +14,38 @@
         android:layout_marginBottom="50dp"
         android:background="@android:color/white"
         tools:context=".Fragment2">
+        
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="10dp"
-        tools:context=".Fragment2">
+        android:layout_height="wrap_content">
+        <TableRow>
+            <FrameLayout
+                android:layout_weight="1">
+                <ImageButton
+                    android:id="@+id/test"
+                    android:layout_width="wrap_content"
+                    android:layout_height="170dp"
+                    android:src="@drawable/sandwich"
+                    android:background="@drawable/rect"
+                    android:backgroundTint="#4D000000"
+                    android:layout_margin="10dp"/>
+                <ImageButton
+                    android:id="@+id/btn_sandwich"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rect"
+                    android:backgroundTint="#66000000"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="샌드위치"
+                    android:textColor="#FFFFFF"/>
+            </FrameLayout>
+            <FrameLayout
+                android:layout_weight="1">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

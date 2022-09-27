@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
 
     InfopageActivity infopageActivity;
     LoginActivity loginActivity;
-    ImageView mainImg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
