@@ -67,7 +67,7 @@ public class Fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity().getApplication(), RecipePageActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+//                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION); // 애니메이션 생략
                 startActivity(intent);
             }
         });

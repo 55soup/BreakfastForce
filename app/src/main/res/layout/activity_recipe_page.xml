@@ -1,14 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_marginBottom="50dp"
+    android:background="@android:color/white"
     tools:context=".RecipePageActivity">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        tools:context=".RecipePageActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="레시피 페이지입니다. " />
-</LinearLayout>
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_left"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#00000000" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/recipe_sandwich" />
+       <TableLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp">
+           <View
+               android:background="#d3d3d3"
+               android:layout_height="2px" />
+           <TableRow>
+               <TextView
+                   android:textColor="@color/black"
+                   android:layout_marginTop="10dp"
+                   android:text="분주한 아침 간단하게 먹을 수 있는\n 아삭아삭 채소와 부드러운 빵의 조화" />
+           </TableRow>
+           <TableRow>
+               <TextView
+                   android:textColor="@color/black"
+                   android:layout_marginTop="10dp"
+                   android:textSize="25dp"
+                   android:text="샌드위치" />
+           </TableRow>
+           <TableRow>
+               <View
+                   android:layout_width="0dp"
+                   android:layout_height="0dp"
+                   android:layout_weight="1" />
+               <LinearLayout android:orientation="horizontal">
+
+                   <ImageView
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent"
+                       android:src="@drawable/ic_happy" />
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent"
+                       android:layout_marginLeft="2dp"
+                       android:text="0" />
+               </LinearLayout>
+           </TableRow>
+           <View
+               android:background="#d3d3d3"
+               android:layout_height="2px"
+               android:layout_marginTop="10dp"/>
+           <TextView
+               android:textSize="17dp"
+               android:text="[재료]"
+               android:textColor="@color/black"
+               android:layout_marginTop="20dp"/>
+           <TextView
+               android:text="빵 / 양상추 / 베이컨 / 토마토 / 햄 / 치즈" />
+           <TextView
+               android:textSize="17dp"
+               android:text="[조리순서]"
+               android:textColor="@color/black"
+               android:layout_marginTop="20dp"/>
+
+          <ScrollView />
+       </TableLayout>
+    </LinearLayout>
+</ScrollView>
