@@ -26,14 +26,14 @@ class fragment2Detail extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageButton test = (ImageButton) findViewById(R.id.test);
-        test.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), SubActivity.class);
-                startActivity(intent);
-            }
-        });
+//        ImageButton test = (ImageButton) findViewById(R.id.test);
+//        test.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(getApplicationContext(), SubActivity.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 }
 
@@ -41,7 +41,7 @@ public class Fragment2 extends Fragment {
     ImageButton btn_sandwich;
 
     FrameLayout frame_sandwich;
-    ImageButton btn_sandwich;
+//    ImageButton btn_sandwich;
     public Fragment2() {
         // Required empty public constructor
     }

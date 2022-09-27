@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BreakfastForce">
         <activity
+            android:name=".Fragment2DetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".Fragment1DiaryActivity"
             android:exported="false" /> <!-- 시작 페이지 -> LoginActivity -->
         <!-- <activity android:name=".LoginActivity" -->
@@ -47,7 +50,6 @@
             android:name=".SubActivity"
             android:exported="false"
             tools:ignore="Instantiatable" />
-
         <activity
             android:name=".Fragment2DetailActivty"
             android:exported="false" />

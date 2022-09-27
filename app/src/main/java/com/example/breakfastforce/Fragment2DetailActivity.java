@@ -1,16 +1,15 @@
 package com.example.breakfastforce;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-
 import android.os.Bundle;
+import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-class Fragment2DetailActivty extends Fragment {
 
-    public Fragment2DetailActivty() {
+public class Fragment2DetailActivity extends Fragment {
+
+    public Fragment2DetailActivity() {
         // Required empty public constructor
     }
 
@@ -19,7 +18,8 @@ class Fragment2DetailActivty extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.activity_fragment4, container, false);
+        return inflater.inflate(R.layout.activity_fragment2_detail, container, false);
 
     }
+
 }
