@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BreakfastForce">
         <activity
+            android:name=".BookmarksActivity"
+            android:exported="false" />
+        <activity
             android:name=".RecipePageActivity"
             android:exported="false" />
         <activity
