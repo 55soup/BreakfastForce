@@ -14,160 +14,200 @@
         android:layout_marginBottom="50dp"
         android:background="@android:color/white"
         tools:context=".Fragment2">
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="10dp"
-        tools:context=".Fragment2">
-        <TextView
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="user님은\n이런 아침 어떠세요?"
-            android:textSize="25sp"
-            android:layout_marginBottom="20dp"/>
-        <TableLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp">
-            <TableRow>
-                <FrameLayout
-                    android:id="@+id/frame_sandwich"
-                    android:layout_weight="1">
-                    <ImageButton
-                        android:layout_width="170dp"
-                        android:layout_height="170dp"
-                        android:src="@drawable/sandwich"
-                        android:background="@drawable/rect"
-                        android:backgroundTint="#4D000000"
-                        android:layout_margin="10dp"
-                        android:clickable="false"/>
-                    <ImageButton
-                        android:id="@+id/btn_sandwich"
-                        android:layout_width="170dp"
-                        android:layout_height="170dp"
-                        android:layout_margin="10dp"
-                        android:background="@drawable/rect"
-                        android:backgroundTint="#66000000" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="샌드위치"
-                        android:textColor="#FFFFFF"/>
-                </FrameLayout>
-                <FrameLayout
-                    android:layout_weight="1">
-                    <ImageButton
-                        android:layout_width="170dp"
-                        android:layout_height="170dp"
-                        android:layout_margin="10dp"
-                        android:background="@drawable/rect"
-                        android:backgroundTint="#4D000000"
-                        android:src="@drawable/yogurt_bowl"
-                        tools:ignore="DuplicateClickableBoundsCheck" />
-                    <ImageButton
-                        android:id="@+id/btn_yogurt"
-                        android:layout_width="170dp"
-                        android:layout_height="170dp"
-                        android:layout_margin="10dp"
-                        android:background="@drawable/rect"
-                        android:backgroundTint="#66000000"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="그릭요거트"
-                        android:textColor="#FFFFFF"/>
-                </FrameLayout>
-            </TableRow>
-            <TableRow>
-                <FrameLayout
-                    android:layout_weight="1">
-                    <ImageButton
-                        android:layout_width="170dp"
-                        android:layout_height="170dp"
-                        android:src="@drawable/salad"
-                        android:background="@drawable/rect"
-                        android:backgroundTint="#4D000000"
-                        android:layout_margin="10dp"  />
-                    <ImageButton
-                        android:id="@+id/btn_salad"
-                        android:layout_width="170dp"
-                        android:layout_height="170dp"
-                        android:layout_margin="10dp"
-                        android:background="@drawable/rect"
-                        android:backgroundTint="#66000000"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="샐러드"
-                        android:textColor="#FFFFFF"/>
-                </FrameLayout>
-                <FrameLayout
-                    android:layout_weight="1">
-                    <ImageButton
-                        android:layout_width="170dp"
-                        android:layout_height="170dp"
-                        android:src="@drawable/rice_bowl"
-                        android:background="@drawable/rect"
-                        android:backgroundTint="#4D000000"
-                        android:layout_margin="10dp"  />
-                    <ImageButton
-                        android:id="@+id/btn_riceBowl"
-                        android:layout_width="170dp"
-                        android:layout_height="170dp"
-                        android:layout_margin="10dp"
-                        android:background="@drawable/rect"
-                        android:backgroundTint="#66000000"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="주먹밥"
-                        android:textColor="#FFFFFF"/>
-                </FrameLayout>
-            </TableRow>
-        </TableLayout>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp"
+            tools:context=".Fragment2">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="user님은\n이런 아침 어떠세요?"
+                android:textSize="25sp"
+                android:layout_marginBottom="20dp"/>
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+                <TableRow>
+                    <FrameLayout
+                        android:id="@+id/frame_sandwich"
+                        android:layout_weight="1">
+                        <ImageButton
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:src="@drawable/sandwich"
+                            android:background="@drawable/rect"
+                            android:backgroundTint="#4D000000"
+                            android:layout_margin="10dp"
+                            android:clickable="false"/>
+                        <ImageButton
+                            android:id="@+id/btn_sandwich"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/rect"
+                            android:backgroundTint="#66000000" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="샌드위치"
+                            android:textColor="#FFFFFF"/>
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_weight="1">
+                        <ImageButton
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/rect"
+                            android:backgroundTint="#4D000000"
+                            android:src="@drawable/yogurt_bowl"
+                            tools:ignore="DuplicateClickableBoundsCheck" />
+                        <ImageButton
+                            android:id="@+id/btn_yogurt"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/rect"
+                            android:backgroundTint="#66000000"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="그릭요거트"
+                            android:textColor="#FFFFFF"/>
+                    </FrameLayout>
+                </TableRow>
+                <TableRow>
+                    <FrameLayout
+                        android:layout_weight="1">
+                        <ImageButton
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:src="@drawable/salad"
+                            android:background="@drawable/rect"
+                            android:backgroundTint="#4D000000"
+                            android:layout_margin="10dp"  />
+                        <ImageButton
+                            android:id="@+id/btn_salad"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/rect"
+                            android:backgroundTint="#66000000"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="샐러드"
+                            android:textColor="#FFFFFF"/>
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_weight="1">
+                        <ImageButton
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:src="@drawable/rice_bowl"
+                            android:background="@drawable/rect"
+                            android:backgroundTint="#4D000000"
+                            android:layout_margin="10dp"  />
+                        <ImageButton
+                            android:id="@+id/btn_riceBowl"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/rect"
+                            android:backgroundTint="#66000000"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="주먹밥"
+                            android:textColor="#FFFFFF"/>
+                    </FrameLayout>
+                </TableRow>
+            </TableLayout>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="태그들로 찾기"
-            android:textSize="25sp"
-            android:textColor="#000000"
-            android:layout_marginBottom="10dp"/>
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TableRow>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="태그들로 찾기"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:layout_marginBottom="10dp"/>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow>
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp">
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/tag_btn"
+                            android:background="#00000000" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="10dp"
+                            android:textColor="@color/black"
+                            android:text="#채소" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp">
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/tag_btn2"
+                            android:background="#00000000"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="10dp"
+                            android:textColor="@color/black"
+                            android:text="#샐러드" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp">
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/tag_btn3"
+                            android:background="#00000000"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="10dp"
+                            android:textColor="@color/black"
+                            android:text="#샌드위치" />
+                    </FrameLayout>
+                </TableRow>
+            </TableLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="3dp">
                 <FrameLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="3dp">
+                    android:layout_height="wrap_content">
                     <ImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/tag_btn"
-                        android:background="#00000000" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:textSize="10dp"
-                        android:textColor="@color/black"
-                        android:text="#채소" />
-                </FrameLayout>
-                <FrameLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="3dp">
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/tag_btn2"
                         android:background="#00000000"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -175,50 +215,9 @@
                         android:layout_gravity="center"
                         android:textSize="10dp"
                         android:textColor="@color/black"
-                        android:text="#샐러드" />
+                        android:text="#간장계란밥" />
                 </FrameLayout>
-                <FrameLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="3dp">
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/tag_btn3"
-                        android:background="#00000000"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:textSize="10dp"
-                        android:textColor="@color/black"
-                        android:text="#샌드위치" />
-                </FrameLayout>
-            </TableRow>
-        </TableLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="3dp">
-           <FrameLayout
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content">
-               <ImageButton
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:src="@drawable/tag_btn"
-                   android:background="#00000000"/>
-               <TextView
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_gravity="center"
-                   android:textSize="10dp"
-                   android:textColor="@color/black"
-                   android:text="#간장계란밥" />
-           </FrameLayout>
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
     </ScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
