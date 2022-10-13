@@ -37,8 +37,6 @@ class fragment2Detail extends AppCompatActivity {
 public class Fragment2 extends Fragment {
     MainActivity activity;
     ImageButton btn_sandwich;
-//    Fragment2DetailActivty fragment2DetailActivty =
-
 
     public Fragment2() {
         // Required empty public constructor
