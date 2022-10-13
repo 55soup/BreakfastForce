@@ -1,12 +1,16 @@
 package com.example.breakfastforce;
 
+import android.content.Context;
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.provider.ContactsContract;
 import android.util.Log;
@@ -16,6 +20,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 import android.widget.Toast;
 
 
@@ -25,25 +31,29 @@ class fragment2Detail extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-//        ImageButton test = (ImageButton) findViewById(R.id.test);
-//        test.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(getApplicationContext(), SubActivity.class);
-//                startActivity(intent);
-//            }
-//        });
     }
 }
 
 public class Fragment2 extends Fragment {
+    MainActivity activity;
     ImageButton btn_sandwich;
+//    Fragment2DetailActivty fragment2DetailActivty =
 
-    FrameLayout frame_sandwich;
-//    ImageButton btn_sandwich;
+
     public Fragment2() {
         // Required empty public constructor
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        activity = (MainActivity) getActivity();
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        activity = null;
     }
 
     @Override
@@ -51,45 +61,17 @@ public class Fragment2 extends Fragment {
                              Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // Inflate the layout for this fragment
-
-
-
-//        View v = inflater.inflate(R.layout.activity_fragment2, container, false);
-//        btn_sandwich = (ImageButton) v.findViewById(R.id.btn_sandwich);
-//        btn_sandwich.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Toast.makeText(getActivity(), "샌드위치 클릭", Toast.LENGTH_SHORT).show();
-//                Intent in = new Intent();
-//                startActivity(in);
-//            }
-//        });
-
         View v = inflater.inflate(R.layout.activity_fragment2, container, false);
-        frame_sandwich = v.findViewById(R.id.frame_sandwich);
-        btn_sandwich = v.findViewById(R.id.btn_sandwich);
-        frame_sandwich.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getActivity(), "하이", Toast.LENGTH_SHORT).show();
-            }
-        });
+        btn_sandwich = (ImageButton) v.findViewById(R.id.btn_sandwich);
         btn_sandwich.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(), "하이", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getActivity().getApplication(), RecipePageActivity.class);
+//                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION); // 애니메이션 생략
+                startActivity(intent);
             }
         });
+        return v; //반드시 추가!
 
-        return inflater.inflate(R.layout.activity_fragment2, container, false);
-    }
-
-}
-
-class SubActivity extends AppCompatActivity {
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fragment2_detail);
     }
 }
