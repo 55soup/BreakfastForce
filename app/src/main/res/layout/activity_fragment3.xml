@@ -26,6 +26,6 @@
     android:id="@+id/alarm"
     android:layout_width="300dp"
     android:layout_height="wrap_content"
-    android:text="8시로 알림 설정하기"
+    android:text="알람설정하러 가기~"
     android:layout_gravity="center" />
 </LinearLayout>

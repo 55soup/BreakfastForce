@@ -1,10 +1,16 @@
 package com.example.breakfastforce;
 
+import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.RequiresApi;
+import androidx.core.view.KeyEventDispatcher;
 import androidx.fragment.app.Fragment;
 
 import android.util.Log;
@@ -17,13 +23,13 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import java.sql.Time;
+import java.util.List;
 
 
 public class Fragment3 extends Fragment {
     TimePicker timepicker;
     Button alarm;
     TextView time_txt;
-    int nHour, nMin;
     public Fragment3() {
         // Required empty public constructor
     }
@@ -53,21 +59,39 @@ public class Fragment3 extends Fragment {
                 }else{
                     time_txt.setText("아침을 오전 "+hour+"시"+minute+"분 에\n 먹는 것이 좋아요!");
                 }
-
             }
         });
-        nHour = timepicker.getCurrentHour();
-//        nMin = timepicker.getCurrentMinute();
-//        alarm.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Toast.makeText(getActivity(), nHour + nMin, Toast.LENGTH_SHORT).show();
-//            }
-//        });
+
+        alarm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try{
+                    Intent intent = getPackageManager().getLaunchIntentForPackage("com.sec.android.app.clockpackage");
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
+                }catch(Exception e){
+                    String url = "market://details?id=" + "com.sec.android.app.clockpackage";
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                    startActivity(intent);
+                }
+//                 시계앱으로 연결
+//                ComponentName cn = new ComponentName("com.sec.android.app.clockpackage", "com.sec.android.app.clockpackage.clockPackage");
+//                Intent intent = new Intent(Intent.ACTION_MAIN);
+//                intent.addCategory(Intent.CATEGORY_LAUNCHER);
+//                intent.setComponent(cn);
+//                startActivity(intent);
+            }
+
+            private PackageManager getPackageManager() {
+                return null;
+            }
+
+        });
         return v; // 반드시 추가
 //        return inflater.inflate(R.layout.activity_fragment3, container, false);
 
     }
+
 
 
 }
