@@ -78,7 +78,7 @@
                     android:textSize="13dp"
                     android:id="@+id/date"/>
 
-                <TextView
+                <EditText
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:padding="8dp"
@@ -89,7 +89,8 @@
                     android:textSize="11dp"
                     android:background="@drawable/round_btn"
                     android:backgroundTint="#E6F3DA"
-                    android:id="@+id/title"/>
+                    android:id="@+id/title"
+                    android:layout_gravity="top"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -100,17 +101,18 @@
                     android:textSize="15dp"
                     android:id="@+id/cotent"/>
 
-                <TextView
+                <EditText
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:padding="8dp"
                     android:text=""
-                    android:gravity="center_vertical"
+                    android:gravity="top"
                     android:layout_marginTop="10dp"
                     android:textColor="@color/black"
                     android:textSize="11dp"
                     android:background="@drawable/round_btn"
                     android:backgroundTint="#E6F3DA"
+                    android:lines="30"
                     android:id="@+id/content"/>
 
                 <TextView
@@ -122,7 +124,7 @@
                     android:textSize="15dp"
                     android:id="@+id/photo"/>
 
-                <TextView
+                <Button
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:padding="8dp"
@@ -131,9 +133,9 @@
                     android:layout_marginTop="10dp"
                     android:textColor="@color/black"
                     android:textSize="11dp"
-                    android:background="@drawable/round_btn"
                     android:backgroundTint="#E6F3DA"
-                    android:id="@+id/photo1"/>
+                    android:background="@drawable/round_btn"
+                    android:id="@+id/photo1" />
 
             </LinearLayout>
             </LinearLayout>

@@ -49,7 +49,7 @@ public class Fragment3 extends Fragment {
             @Override
             public void onTimeChanged(TimePicker timePicker, int hour, int minute) {
                 minute += 30; // 30분 뒤에 아침식사
-                if(minute > 60){
+                if(minute >= 60){
                     ++hour;
                     minute -= 60;
                 }
