@@ -20,7 +20,7 @@ public class Fragment4 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.activity_fragment2, container, false);
+        View v = inflater.inflate(R.layout.activity_fragment4, container, false);
         fab_btn = v.findViewById(R.id.fab_btn);
         fab_btn.setOnClickListener(new View.OnClickListener() {
             @Override
