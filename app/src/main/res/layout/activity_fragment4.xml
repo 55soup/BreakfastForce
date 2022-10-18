@@ -8,10 +8,9 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
         android:background="@android:color/white"
-        tools:context=".Fragment1">
+        tools:context=".Fragment4">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -20,11 +19,11 @@
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent">
 
                 <ImageButton
-                    android:layout_width="430dp"
-                    android:layout_height="280dp"
+                    android:layout_width="415dp"
+                    android:layout_height="450dp"
                     android:src="@drawable/toast_egg"/>
 
                 <LinearLayout
@@ -58,76 +57,21 @@
                         android:textSize="10dp" />
 
                 </LinearLayout>
-
             </FrameLayout>
-
-            <LinearLayout
-                android:paddingTop="10dp"
-                android:layout_marginLeft="10dp"
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:text="트윙크님을 위한\n아침먹는 습관 기르기에 관련된 글이에요!"
+                android:textSize="15dp"
+                android:padding="10dp"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="트윙크"
-                    android:textSize="20dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:id="@+id/userName"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="님을 위한"
-                    android:layout_marginLeft="5dp"
-                    android:textSize="17dp"
-                    android:textColor="@color/black"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:paddingTop="10dp"
-                android:layout_marginLeft="10dp"
+            <ListView
+                android:id="@+id/list"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="아침먹는 습관 기르기"
-                    android:textSize="20dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="에 관련된 글이에요!"
-                    android:layout_marginLeft="5dp"
-                    android:textSize="17dp"
-                    android:textColor="@color/black"/>
-
-            </LinearLayout>
-
+                android:layout_height="500dp" />
         </LinearLayout>
 
     </ScrollView>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/toast_egg"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="트윙크님을 위한\n 아침먹는 습관 기르기에 관련된 글이에요!"/>
-    </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
