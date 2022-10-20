@@ -1,5 +1,7 @@
 package com.example.breakfastforce;
 
+import android.widget.CheckBox;
+
 public class ListItem {
     private String title;
     private String content;
