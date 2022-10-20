@@ -28,18 +28,20 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:backgroundTint="#ffffc8"
+            android:backgroundTint="#FFFFC6"
             android:text="시간이 없어요 😨"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:layout_marginBottom="10dp"/>
 
         <Button
             android:id="@+id/btn_case2"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:backgroundTint="#ffffc8"
+            android:backgroundTint="#FFFFC6"
             android:textColor="@color/black"
-            android:text="아침에는 식욕이 없어요 😝" />
+            android:text="아침에는 식욕이 없어요 😝"
+            android:layout_marginBottom="10dp"/>
 
         <Button
             android:id="@+id/btn_case3"
@@ -48,7 +50,8 @@
             android:layout_gravity="center"
             android:backgroundTint="#ffffc8"
             android:textColor="@color/black"
-            android:text="으... 아침밥 너무 귀찮아요 😡" />
+            android:text="으... 아침밥 너무 귀찮아요 😡"
+            android:layout_marginBottom="10dp"/>
 
         <Button
             android:id="@+id/btn_case4"
@@ -57,7 +60,8 @@
             android:layout_gravity="center"
             android:backgroundTint="#ffffc8"
             android:textColor="@color/black"
-            android:text="아침은 소화가 잘 안돼요 😶" />
+            android:text="아침은 소화가 잘 안돼요 😶"
+            android:layout_marginBottom="10dp"/>
 
         <Button
             android:id="@+id/btn_case5"
