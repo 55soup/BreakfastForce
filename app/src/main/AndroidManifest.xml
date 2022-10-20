@@ -11,10 +11,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BreakfastForce">
         <activity
+            android:name=".AskMainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".AskSubActivity"
             android:exported="false" />
         <activity
-            android:name=".AskMainActivity"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".BookmarksActivity"
@@ -24,15 +33,7 @@
             android:exported="false" />
         <activity
             android:name=".Fragment1DiaryActivity"
-            android:exported="false" /> <!-- 시작 페이지 -> LoginActivity -->
-        <!-- <activity android:name=".LoginActivity" -->
-        <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar" -->
-        <!-- android:exported="true"> -->
-        <!-- <intent-filter> -->
-        <!-- <action android:name="android.intent.action.MAIN"/> -->
-        <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
-        <!-- </intent-filter> -->
-        <!-- </activity> -->
+            android:exported="false" />
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
@@ -55,23 +56,6 @@
             android:name=".Fragment4"
             android:exported="false"
             tools:ignore="Instantiatable" />
-        <activity
-            android:name=".AskMainActivity"
-            android:exported="false"
-            tools:ignore="DuplicateActivity,Instantiatable" />
-        <activity
-            android:name=".AskSubActivity"
-            android:exported="false"
-            tools:ignore="DuplicateActivity,Instantiatable" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>
