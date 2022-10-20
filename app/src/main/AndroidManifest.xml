@@ -63,7 +63,6 @@
             android:name=".AskSubActivity"
             android:exported="false"
             tools:ignore="DuplicateActivity,Instantiatable" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true">

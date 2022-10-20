@@ -1,5 +1,6 @@
 package com.example.breakfastforce;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.constraintlayout.utils.widget.ImageFilterButton;
@@ -37,12 +38,13 @@ public class Fragment4 extends Fragment {
         fab_btn = v.findViewById(R.id.fab_btn);
         list = (ListView) v.findViewById(R.id.list);
         btn_breakfast = (ImageFilterButton) v.findViewById(R.id.btn_breakfast);
-        float_btn = (FloatingActionButton) v.findViewById(R.id.float_btn);
+        fab_btn = (FloatingActionButton) v.findViewById(R.id.fab_btn);
         adapter = new ListItemAdapter();
         fab_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(getActivity().getApplication(), BookmarksActivity.class);
+                startActivity(intent);
             }
         });
         // btn_breakfast눌렀을 때 글 나오기
