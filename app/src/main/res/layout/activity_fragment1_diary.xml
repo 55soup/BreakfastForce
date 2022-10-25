@@ -13,7 +13,7 @@
         android:orientation="vertical"
         android:padding="10dp"
         android:background="@android:color/white"
-        tools:context=".Fragment1">
+        tools:context=".Fragment1DiaryActivity">
 
         <LinearLayout
             android:padding="15dp"
@@ -76,7 +76,7 @@
                     android:layout_marginTop="10dp"
                     android:textColor="@color/black"
                     android:textSize="13dp"
-                    android:id="@+id/date"/>
+                    android:id="@+id/title"/>
 
                 <EditText
                     android:layout_width="match_parent"
@@ -89,7 +89,7 @@
                     android:textSize="11dp"
                     android:background="@drawable/round_btn"
                     android:backgroundTint="#E6F3DA"
-                    android:id="@+id/title"
+                    android:id="@+id/edtTitle"
                     android:layout_gravity="top"/>
 
                 <TextView
@@ -113,7 +113,7 @@
                     android:background="@drawable/round_btn"
                     android:backgroundTint="#E6F3DA"
                     android:lines="30"
-                    android:id="@+id/content"/>
+                    android:id="@+id/edtContent"/>
 
                 <TextView
                     android:layout_width="match_parent"

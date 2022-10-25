@@ -2,29 +2,52 @@ package com.example.breakfastforce;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.text.Editable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class Fragment1DiaryActivity extends AppCompatActivity {
     ImageButton btn_back;
     Button photo1;
+
     final int GET_GALLERY_IMAGE = 200;
+
+    TextView title, content;
+    EditText edtTitle, edtContent;
+
+    MyDBHelper myHelper;
+    SQLiteDatabase sqlDB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment1_diary);
+        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, MODE_PRIVATE);
+
+        title = findViewById(R.id.title);
+        content = findViewById(R.id.content);
+        edtTitle = findViewById(R.id.edtTitle);
+        edtContent = findViewById(R.id.edtContent);
+
+        Intent in = getIntent();
+        String fname = in.getStringExtra("fname"); //2022_08_05 -> "2022","08", "05"
+        String[] arr = fname.split("_"); //언더바로 문자열 분리 -> 문자배열 처리
 
         btn_back = findViewById(R.id.btn_back);
         photo1 = findViewById(R.id.photo1);
