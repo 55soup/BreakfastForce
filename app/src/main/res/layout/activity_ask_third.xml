@@ -5,13 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="10dp"
-    tools:context=".AskSubActivity">
-
+    tools:context=".AskThirdActivity">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="아침을 안 먹는 이유가 무엇인가요? 🤔"
+        android:text="밥은 어떤 종류를 주로 먹나요? 🤔"
         android:textSize="20dp"
         android:textStyle="bold"
         android:layout_gravity="center"
@@ -31,7 +29,7 @@
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
                 android:button="@null"
-                android:text="시간이 없어요 😨"
+                android:text="밥, 주먹밥, 볶음밥 등 (쌀종류) 🍙"
                 android:background="@drawable/bg_radio_button"
                 android:gravity="center"
                 android:layout_marginBottom="16dp"/>
@@ -39,7 +37,7 @@
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
                 android:button="@null"
-                android:text="아침에는 식욕이 없어요 😝"
+                android:text="빵, 시리얼 등 (밀 종류) 🍞"
                 android:background="@drawable/bg_radio_button"
                 android:gravity="center"
                 android:layout_marginBottom="16dp"/>
@@ -47,7 +45,7 @@
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
                 android:button="@null"
-                android:text="으... 아침밥 너무 귀찮아요 😡"
+                android:text="요거트 🥣"
                 android:background="@drawable/bg_radio_button"
                 android:gravity="center"
                 android:layout_marginBottom="16dp"/>
@@ -55,11 +53,18 @@
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
                 android:button="@null"
-                android:text="아침은 소화가 잘 안돼요 😶"
+                android:text="우유, 물 몇 잔 🥛"
+                android:background="@drawable/bg_radio_button"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"/>
+            <RadioButton
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:text="과일 종류 🍎"
                 android:background="@drawable/bg_radio_button"
                 android:gravity="center"
                 android:layout_marginBottom="16dp"/>
         </RadioGroup>
     </LinearLayout>
-
 </LinearLayout>
