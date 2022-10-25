@@ -11,8 +11,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="아침을 왜 먹지 않았나요?"
-        android:textSize="30dp"
+        android:text="아침을 안 먹는 이유가 무엇인가요? 🤔"
+        android:textSize="20dp"
         android:textStyle="bold"
         android:layout_gravity="center"
         android:layout_marginTop="100dp"
@@ -23,58 +23,43 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btn_case1"
-            android:layout_width="250dp"
+        <RadioGroup
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:backgroundTint="#FFFFC6"
-            android:text="시간이 없어요 😨"
-            android:textColor="@color/black"
-            android:layout_marginBottom="10dp"/>
-
-        <Button
-            android:id="@+id/btn_case2"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:backgroundTint="#FFFFC6"
-            android:textColor="@color/black"
-            android:text="아침에는 식욕이 없어요 😝"
-            android:layout_marginBottom="10dp"/>
-
-        <Button
-            android:id="@+id/btn_case3"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:backgroundTint="#ffffc8"
-            android:textColor="@color/black"
-            android:text="으... 아침밥 너무 귀찮아요 😡"
-            android:layout_marginBottom="10dp"/>
-
-        <Button
-            android:id="@+id/btn_case4"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:backgroundTint="#ffffc8"
-            android:textColor="@color/black"
-            android:text="아침은 소화가 잘 안돼요 😶"
-            android:layout_marginBottom="10dp"/>
-
-        <Button
-            android:id="@+id/btn_case5"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:backgroundTint="#ffffff"
-            android:textColor="@color/black"
-            android:text="이유 없어요. 😶"
-            android:textSize="10dp"/>
-
-
-
+            android:layout_gravity="center">
+            <RadioButton
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:text="시간이 없어요 😨"
+                android:background="@drawable/bg_radio_button"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"/>
+            <RadioButton
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:text="아침에는 식욕이 없어요 😝"
+                android:background="@drawable/bg_radio_button"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"/>
+            <RadioButton
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:text="으... 아침밥 너무 귀찮아요 😡"
+                android:background="@drawable/bg_radio_button"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"/>
+            <RadioButton
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:text="아침은 소화가 잘 안돼요 😶"
+                android:background="@drawable/bg_radio_button"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"/>
+        </RadioGroup>
     </LinearLayout>
 
 </LinearLayout>

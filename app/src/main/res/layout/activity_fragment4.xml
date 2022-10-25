@@ -84,10 +84,8 @@
         android:layout_gravity="end|bottom"
         android:layout_marginBottom="70dp"
         android:layout_marginRight="30dp"
-        app:backgroundTint="#FFF8BA"
-        android:src="@drawable/bookmark">
-
-
+        app:backgroundTint="#4E7728"
+        android:src="@drawable/bookmark2">
     </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
