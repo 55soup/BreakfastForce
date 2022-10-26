@@ -22,7 +22,7 @@ public class AskMainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(AskMainActivity.this, AskSubActivity.class);
                 startActivity(intent);
-//                overridePendingTransition(R.anim.anim_slide_in_left, R.anim.anim_slide_out_right); //애니메이션 리소스
+                overridePendingTransition(R.anim.anim_slide_to_left, R.anim.anim_slide_center);
             }
         });
     }
