@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BreakfastForce">
         <activity
-            android:name=".Fragment1"
+            android:name=".AskThirdActivity"
             android:exported="false" />
         <activity
             android:name=".AskMainActivity"
