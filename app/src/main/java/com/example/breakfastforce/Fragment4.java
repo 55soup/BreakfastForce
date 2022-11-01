@@ -10,20 +10,24 @@ import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
 public class Fragment4 extends Fragment {
     FloatingActionButton fab_btn;
-    ListView list;
+    ListView listview;
     ListItemAdapter adapter;
     ImageFilterButton btn_breakfast;
     FloatingActionButton float_btn;
+    final ArrayList<String> arrayList = new ArrayList<String>();
 
     public Fragment4() {
         // Required empty public constructor
@@ -36,7 +40,7 @@ public class Fragment4 extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.activity_fragment4, container, false);
         fab_btn = v.findViewById(R.id.fab_btn);
-        list = (ListView) v.findViewById(R.id.list);
+        listview = (ListView) v.findViewById(R.id.listview);
         btn_breakfast = (ImageFilterButton) v.findViewById(R.id.btn_breakfast);
         fab_btn = (FloatingActionButton) v.findViewById(R.id.fab_btn);
         adapter = new ListItemAdapter();
@@ -59,8 +63,10 @@ public class Fragment4 extends Fragment {
         adapter.addItem(new ListItem("내가 자주 하는 아침 루틴", "아침에 일어나서 요가를 많이 한다.\n" +
                 "잠으로 찌뿌둥해진 몸도 많이 풀리고\n" +
                 "정신도 맑아지는 것 같다.\n", "2022.10.19"));
-        list.setAdapter(adapter);
+        listview.setAdapter(adapter);
         ////////////////////////////////////////////////////////
+        //// 리스트뷰를 클릭했을 시
+
         return v;
 
     }

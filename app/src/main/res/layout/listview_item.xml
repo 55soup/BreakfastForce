@@ -31,10 +31,10 @@
         android:textSize="9dp" />
 
     <CheckBox
+        android:id="@+id/bookmark"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:buttonTint="#4E7728"
-        android:id="@+id/bookmark"
         android:layout_row="1"
         android:layout_marginLeft="50dp"
         android:button="@drawable/confirm_btn"

@@ -33,8 +33,7 @@ public class MainActivity extends AppCompatActivity {
         fragment4 = new Fragment4();
 
         loginActivity = new LoginActivity();
-
-//        getSupportFragmentManager().beginTransaction().replace(R.id.container,fragment1).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.container,fragment1).commit();
 
         BottomNavigationView bottomNavigation = findViewById(R.id.bottom_navigation);
         bottomNavigation.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
