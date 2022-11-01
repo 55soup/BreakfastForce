@@ -28,7 +28,7 @@ public class AskThirdActivity extends AppCompatActivity {
         btn_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AskThirdActivity.this, Fragment1.class);
+                Intent intent = new Intent(AskThirdActivity.this, MainActivity.class);
                 startActivity(intent); // activity -> fragment 이동 구현해야함
                 overridePendingTransition(R.anim.anim_slide_to_left, R.anim.anim_slide_center);
             }
