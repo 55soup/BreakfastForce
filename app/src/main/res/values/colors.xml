@@ -11,5 +11,6 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="lightYellow">#FFFFFFC8</color>
+    <color name="realYellow">#FFAE12</color>
     <color name="parmesanCheese">#FFBB37</color>
 </resources>

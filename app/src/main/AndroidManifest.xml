@@ -14,7 +14,7 @@
             android:name=".AskThirdActivity"
             android:exported="false" />
         <activity
-            android:name=".AskMainActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,8 +26,9 @@
             android:name=".AskSubActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
-            android:exported="false" />
+            android:name=".AskMainActivity"
+            android:exported="false"
+            tools:ignore="DuplicateActivity" />
         <activity
             android:name=".BookmarksActivity"
             android:exported="false" />
