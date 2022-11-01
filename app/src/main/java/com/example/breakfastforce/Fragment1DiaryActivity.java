@@ -45,8 +45,6 @@ public class Fragment1DiaryActivity extends AppCompatActivity {
         edtTitle = findViewById(R.id.edtTitle);
         edtContent = findViewById(R.id.edtContent);
 
-
-
         btn_back = findViewById(R.id.btn_back);
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
