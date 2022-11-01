@@ -45,7 +45,8 @@
             android:exported="false" />
         <activity
             android:name=".Fragment1"
-            android:exported="false"/>
+            android:exported="false"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".Fragment2"
             android:exported="false"

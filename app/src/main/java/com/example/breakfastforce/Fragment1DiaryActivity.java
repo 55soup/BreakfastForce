@@ -31,7 +31,7 @@ public class Fragment1DiaryActivity extends AppCompatActivity {
     TextView title, content;
     EditText edtTitle, edtContent;
 
-    MyDBHelper myHelper;
+    MyDBHelper myhelper;
     SQLiteDatabase sqlDB;
 
     @Override
@@ -45,26 +45,27 @@ public class Fragment1DiaryActivity extends AppCompatActivity {
         edtTitle = findViewById(R.id.edtTitle);
         edtContent = findViewById(R.id.edtContent);
 
-        Intent in = getIntent();
-        String fname = in.getStringExtra("fname"); //2022_08_05 -> "2022","08", "05"
-        String[] arr = fname.split("_"); //언더바로 문자열 분리 -> 문자배열 처리
+
 
         btn_back = findViewById(R.id.btn_back);
-        photo1 = findViewById(R.id.photo1);
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed(); // 뒤로 가기 버튼
             }
         });
-        photo1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_PICK);
-                intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
-                startActivityForResult(intent,GET_GALLERY_IMAGE);
-            }
-        });
+
+
+
+//        photo1 = findViewById(R.id.photo1);
+//        photo1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(Intent.ACTION_PICK);
+//                intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
+////                startActivityForResult(intent,GET_GALLERY_IMAGE);
+//            }
+//        });
 
     }
 }

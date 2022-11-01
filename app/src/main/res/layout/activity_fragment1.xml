@@ -167,6 +167,20 @@
                     android:backgroundTint="#40FFF8BA"
                     android:id="@+id/dateCotent1"/>
 
+                <Button
+                    android:id="@+id/date11"
+                    android:layout_width="310dp"
+                    android:layout_height="34dp"
+                    android:background="#ffffff"
+                    android:text="선택"
+                    android:textColor="#000000"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.25" />
+
             </LinearLayout>
 
         </LinearLayout>
