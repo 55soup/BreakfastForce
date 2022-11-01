@@ -39,7 +39,6 @@ public class Fragment4 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.activity_fragment4, container, false);
-        fab_btn = v.findViewById(R.id.fab_btn);
         listview = (ListView) v.findViewById(R.id.listview);
         btn_breakfast = (ImageFilterButton) v.findViewById(R.id.btn_breakfast);
         fab_btn = (FloatingActionButton) v.findViewById(R.id.fab_btn);

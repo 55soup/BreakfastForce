@@ -68,7 +68,6 @@
                 android:text="트윙크님을 위한\n아침먹는 습관 기르기에 관련된 글이에요!"
                 android:textSize="15dp"
                 android:padding="10dp"/>
-
             <ListView
                 android:id="@+id/listview"
                 android:layout_width="match_parent"
