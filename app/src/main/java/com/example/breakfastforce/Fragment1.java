@@ -45,14 +45,14 @@ public class Fragment1 extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.activity_fragment1, container, false);
         fab_btn = v.findViewById(R.id.fab_btn);
-//        fab_btn = (FloatingActionButton) v.findViewById(R.id.fab_btn);
-////        fab_btn.setOnClickListener(new View.OnClickListener() {
-////            @Override
-////            public void onClick(View v) {
-////                Intent intent = new Intent(getActivity().getApplication(), Fragment1DiaryActivity.class);
-////                startActivity(intent);
-////            }
-////        });
+        fab_btn = (FloatingActionButton) v.findViewById(R.id.fab_btn);
+        fab_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity().getApplication(), Fragment1DiaryActivity.class);
+                startActivity(intent);
+            }
+        });
 
 //        Calendar c = Calendar.getInstance();
 //        int mYear = c.get(Calendar.YEAR);
