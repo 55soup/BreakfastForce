@@ -11,10 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BreakfastForce">
         <activity
+            android:name=".AskMainActivity"
+            android:exported="false" />
+        <activity
             android:name=".AskThirdActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".InputNameActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,7 +29,7 @@
             android:name=".AskSubActivity"
             android:exported="false" />
         <activity
-            android:name=".AskMainActivity"
+            android:name=".MainActivity"
             android:exported="false"
             tools:ignore="DuplicateActivity" />
         <activity

@@ -13,8 +13,10 @@ public class MyDBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        String sql = "CREATE TABLE DiaryTBL(_id integer primary key autoincrement, " + "diaryDate char(30), content varchar(600));";
-        sqLiteDatabase.execSQL(sql);
+        String diarySql = "CREATE TABLE DiaryTBL(_id integer primary key autoincrement, " + "diaryDate char(30), content varchar(600));";
+        sqLiteDatabase.execSQL(diarySql);
+//        String userSql = "CREATE TABLE DiaryTBL(_id integer primary key autoincrement, " + "diaryDate char(30), content varchar(600));";
+//        sqLiteDatabase.execSQL(userSql);
     }
 
     @Override
