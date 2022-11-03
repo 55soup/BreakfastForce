@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rect2">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dialog_id"
+            android:text="년 월 일"
+            android:textSize="15dp"
+            android:paddingTop="10dp"
+            android:paddingLeft="20dp"
+            android:layout_marginBottom="10dp"/>
+
+        <ImageButton
+            android:layout_width="300dp"
+            android:layout_height="120dp"
+            android:src="@drawable/toast_egg"
+            android:layout_gravity="center"
+            android:background="@drawable/rect"
+            android:id="@+id/img"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/content"
+            android:text="으응 어쩌구 저쩌구 지리고 자시고 구르기으응 어쩌 지리고 자시고 구르기으응 어쩌구 저쩌구 지리고 자시고 구르기으응 어쩌구 저쩌구 지리고 자시고 ..."
+            android:layout_marginTop="15dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textSize="10dp"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
