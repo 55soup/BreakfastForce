@@ -19,12 +19,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class Fragment1DiaryActivity extends AppCompatActivity {
     ImageButton btn_back;
     Button photo1;
+
+    TextView dialog_id;
 
     final int GET_GALLERY_IMAGE = 200;
 
@@ -53,7 +56,14 @@ public class Fragment1DiaryActivity extends AppCompatActivity {
             }
         });
 
+        // fragment1 에서 받아온 값
+        Intent intent = getIntent();
+        String c = intent.getStringExtra("날짜");
 
+//        Toast.makeText(getApplicationContext(), c, Toast.LENGTH_SHORT).show();
+
+        dialog_id = findViewById(R.id.dialog_id);
+        dialog_id.setText(c);
 
 //        photo1 = findViewById(R.id.photo1);
 //        photo1.setOnClickListener(new View.OnClickListener() {

@@ -28,6 +28,7 @@ import android.widget.DatePicker;
 import android.app.DatePickerDialog;
 import android.widget.Toast;
 
+import java.io.Serializable;
 import java.util.Calendar;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -38,17 +39,16 @@ import java.util.Locale;
 
 public class Fragment1 extends Fragment {
     FloatingActionButton fab_btn;
-    DatePickerDialog dlg;
 
     Calendar myCalendar = Calendar.getInstance();
 
     DatePickerDialog.OnDateSetListener myDatePicker = new DatePickerDialog.OnDateSetListener() {
         @Override
         public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-//          myCalendar.set(Calendar.YEAR, year);
-//          myCalendar.set(Calendar.MONTH, month);
-//          myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+            String c = year + "년 " + (month + 1) + "월 " + dayOfMonth + "일";
+
             Intent intent = new Intent(getActivity().getApplication(), Fragment1DiaryActivity.class);
+            intent.putExtra("날짜", c);
             startActivity(intent);
         }
     };
@@ -102,8 +102,6 @@ public class Fragment1 extends Fragment {
 
 
         return v;
-
-
 
     }
 }
