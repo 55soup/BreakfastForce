@@ -41,10 +41,6 @@ import java.util.Locale;
 public class Fragment1 extends Fragment {
     FloatingActionButton fab_btn;
 
-    ListView listview;
-    ListItemAdapter adapter;
-    final ArrayList<String> arrayList = new ArrayList<String>();
-
     Calendar myCalendar = Calendar.getInstance();
 
     DatePickerDialog.OnDateSetListener myDatePicker = new DatePickerDialog.OnDateSetListener() {
@@ -72,9 +68,6 @@ public class Fragment1 extends Fragment {
         fab_btn = v.findViewById(R.id.fab_btn);
         fab_btn = (FloatingActionButton) v.findViewById(R.id.fab_btn);
 
-        listview = (ListView) v.findViewById(R.id.listview);
-        adapter = new ListItemAdapter();
-
         fab_btn.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
@@ -83,17 +76,6 @@ public class Fragment1 extends Fragment {
 
             }
         });
-
-        adapter.addItem(new ListItem("아침을 먹어야하는 이유", "2020년 부터 매일 아침을 먹기로\n" +
-                "마음 먹었다. 그 뒤로 꾸준히 가리지않고\n" +
-                "일정한 시간 밥을 먹었다.", "2022.10.19"));
-        adapter.addItem(new ListItem("가족과 함께 즐거운 아침", "2020년 부터 매일 아침을 먹기로\n" +
-                "마음 먹었다. 그 뒤로 꾸준히 가리지않고\n" +
-                "일정한 시간 밥을 먹었다.", "2022.10.19"));
-        adapter.addItem(new ListItem("내가 자주 하는 아침 루틴", "아침에 일어나서 요가를 많이 한다.\n" +
-                "잠으로 찌뿌둥해진 몸도 많이 풀리고\n" +
-                "정신도 맑아지는 것 같다.\n", "2022.10.19"));
-        listview.setAdapter(adapter);
 
 
         return v;

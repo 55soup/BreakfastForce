@@ -17,8 +17,9 @@
             android:name=".AskThirdActivity"
             android:exported="false" />
         <activity
-            android:name=".InputNameActivity"
-            android:exported="true">
+            android:name=".MainActivity"
+            android:exported="true"
+            tools:ignore="Instantiatable">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,9 +30,9 @@
             android:name=".AskSubActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Fragment1"
             android:exported="false"
-            tools:ignore="DuplicateActivity" />
+            tools:ignore="DuplicateActivity,Instantiatable" />
         <activity
             android:name=".BookmarksActivity"
             android:exported="false" />
@@ -48,7 +49,7 @@
             android:name=".diagnosis"
             android:exported="false" />
         <activity
-            android:name=".Fragment1"
+            android:name=".InputNameActivity"
             android:exported="false"
             tools:ignore="Instantiatable" />
         <activity

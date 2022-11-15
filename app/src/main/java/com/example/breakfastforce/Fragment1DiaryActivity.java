@@ -34,9 +34,6 @@ public class Fragment1DiaryActivity extends AppCompatActivity {
     TextView title, content;
     EditText edtTitle, edtContent;
 
-    MyDBHelper myhelper;
-    SQLiteDatabase sqlDB;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
