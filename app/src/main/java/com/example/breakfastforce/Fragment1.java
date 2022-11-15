@@ -47,9 +47,11 @@ public class Fragment1 extends Fragment {
         @Override
         public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
             String c = year + "년 " + (month + 1) + "월 " + dayOfMonth + "일";
+//            String sdPath = year + "_" + (month + 1) + "_" + dayOfMonth;
 
             Intent intent = new Intent(getActivity().getApplication(), Fragment1DiaryActivity.class);
             intent.putExtra("날짜", c);
+//            intent.putExtra("SD", sdPath);
             startActivity(intent);
         }
     };
