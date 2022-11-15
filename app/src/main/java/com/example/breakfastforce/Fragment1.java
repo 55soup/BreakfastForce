@@ -39,9 +39,11 @@ public class Fragment1 extends Fragment {
         @Override
         public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
             String c = year + "년 " + (month + 1) + "월 " + dayOfMonth + "일";
+            String sdPath = year + "_" + (month + 1) + "_" + dayOfMonth;
 
             Intent intent = new Intent(getActivity().getApplication(), Fragment1DiaryActivity.class);
             intent.putExtra("날짜", c);
+            intent.putExtra("경로", sdPath);
             startActivity(intent);
         }
     };
@@ -55,6 +57,9 @@ public class Fragment1 extends Fragment {
     @RequiresApi(api = Build.VERSION_CODES.M)
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
+
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.activity_fragment1, container, false);
         fab_btn = (FloatingActionButton) v.findViewById(R.id.fab_btn);

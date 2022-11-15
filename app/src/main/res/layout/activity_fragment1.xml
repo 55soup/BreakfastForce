@@ -40,7 +40,9 @@
                     android:textSize="17dp"
                     android:textColor="@color/black"/>
             </LinearLayout>
+
         </LinearLayout>
+
 
     </ScrollView>
 
