@@ -9,3 +9,6 @@ https://www.charlezz.com/?p=45727
 #### 일기 구현 참고
 
 https://hanyeop.tistory.com/89
+
+#### 일기 이미지 intent 구현 
+http://daplus.net/android-android-%EC%99%B8%EB%B6%80-%EC%A0%80%EC%9E%A5%EC%86%8C%EC%97%90-%ED%8C%8C%EC%9D%BC-%EC%A0%80%EC%9E%A5/
