@@ -6,19 +6,18 @@ import android.os.Bundle;
 import androidx.constraintlayout.utils.widget.ImageFilterButton;
 import androidx.fragment.app.Fragment;
 
-import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.Toast;
+import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class Fragment4 extends Fragment {
@@ -27,7 +26,9 @@ public class Fragment4 extends Fragment {
     ListItemAdapter adapter;
     ImageFilterButton btn_breakfast;
     FloatingActionButton float_btn;
+    TextView userName;
     final ArrayList<String> arrayList = new ArrayList<String>();
+    outputUsername u1 = new outputUsername(getContext()); //getUserName() 메서드를 위한 class
 
     public Fragment4() {
         // Required empty public constructor
@@ -42,7 +43,23 @@ public class Fragment4 extends Fragment {
         listview = (ListView) v.findViewById(R.id.listview);
         btn_breakfast = (ImageFilterButton) v.findViewById(R.id.btn_breakfast);
         fab_btn = (FloatingActionButton) v.findViewById(R.id.fab_btn);
+        userName = (TextView) v.findViewById(R.id.userName);
         adapter = new ListItemAdapter();
+        // ---------------------------------- userName 설정 ----------------------------------
+        try{
+            FileInputStream inFs = getContext().openFileInput("user.txt");
+            byte[] txt = new byte[30];
+            inFs.read(txt);
+            String user = new String(txt);
+            userName.setText(user+"님을 위한\n아침먹는 습관 기르기에 관련된 글이에요!");
+            inFs.close();
+        }catch(FileNotFoundException e){
+            e.printStackTrace();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
+        // ---------------------------------- userName 설정 ----------------------------------
         fab_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

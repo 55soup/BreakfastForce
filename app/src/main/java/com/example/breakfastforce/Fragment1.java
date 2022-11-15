@@ -1,57 +1,47 @@
 package com.example.breakfastforce;
 
-import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
-import android.app.TimePickerDialog;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.RequiresApi;
-import androidx.constraintlayout.utils.widget.ImageFilterButton;
 import androidx.fragment.app.Fragment;
 
-import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.TimePicker;
-import android.widget.DatePicker;
-import android.app.DatePickerDialog;
-import android.widget.Toast;
 
-import java.io.Serializable;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
-import java.util.List;
-import java.util.Locale;
 
 
 public class Fragment1 extends Fragment {
     FloatingActionButton fab_btn;
 
+    ListView listview;
+    ListItemAdapter adapter;
+    final ArrayList<String> arrayList = new ArrayList<String>();
+    TextView userName;
     Calendar myCalendar = Calendar.getInstance();
+    Button clickBtn;
+    outputUsername u1 =  new outputUsername(getContext());
 
     DatePickerDialog.OnDateSetListener myDatePicker = new DatePickerDialog.OnDateSetListener() {
         @Override
         public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
             String c = year + "년 " + (month + 1) + "월 " + dayOfMonth + "일";
-//            String sdPath = year + "_" + (month + 1) + "_" + dayOfMonth;
 
             Intent intent = new Intent(getActivity().getApplication(), Fragment1DiaryActivity.class);
             intent.putExtra("날짜", c);
-//            intent.putExtra("SD", sdPath);
             startActivity(intent);
         }
     };
@@ -67,9 +57,25 @@ public class Fragment1 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.activity_fragment1, container, false);
-        fab_btn = v.findViewById(R.id.fab_btn);
         fab_btn = (FloatingActionButton) v.findViewById(R.id.fab_btn);
+        listview = (ListView) v.findViewById(R.id.listview);
+        userName = (TextView) v.findViewById(R.id.userName);
+        adapter = new ListItemAdapter();
+        // ---------------------------------- userName 설정 ----------------------------------
+        try{
+            FileInputStream inFs = getContext().openFileInput("user.txt");
+            byte[] txt = new byte[30];
+            inFs.read(txt);
+            String user = new String(txt);
+            userName.setText(user);
+            inFs.close();
+        }catch(FileNotFoundException e){
+            e.printStackTrace();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
 
+        // ---------------------------------- userName 설정 ----------------------------------
         fab_btn.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
@@ -78,8 +84,6 @@ public class Fragment1 extends Fragment {
 
             }
         });
-
-
         return v;
 
     }

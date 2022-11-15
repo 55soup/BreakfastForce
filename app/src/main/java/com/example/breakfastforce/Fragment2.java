@@ -22,7 +22,15 @@ import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
+
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 
 class fragment2Detail extends AppCompatActivity {
@@ -37,6 +45,7 @@ class fragment2Detail extends AppCompatActivity {
 public class Fragment2 extends Fragment {
     MainActivity activity;
     ImageButton btn_sandwich;
+    TextView userName;
 
     public Fragment2() {
         // Required empty public constructor
@@ -61,6 +70,21 @@ public class Fragment2 extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.activity_fragment2, container, false);
         btn_sandwich = (ImageButton) v.findViewById(R.id.btn_sandwich);
+        userName = (TextView) v.findViewById(R.id.userName);
+        // ---------------------------------- userName 설정 ----------------------------------
+        try{
+            FileInputStream inFs = getContext().openFileInput("user.txt");
+            byte[] txt = new byte[30];
+            inFs.read(txt);
+            String user = new String(txt);
+            userName.setText(user + "님은\n이런 아침 어떠세요?");
+            inFs.close();
+        }catch(FileNotFoundException e){
+            e.printStackTrace();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        // ---------------------------------- userName 설정 ----------------------------------
         btn_sandwich.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,6 +93,7 @@ public class Fragment2 extends Fragment {
                 startActivity(intent);
             }
         });
+
         return v; //반드시 추가!
 
     }

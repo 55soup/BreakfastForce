@@ -63,6 +63,7 @@
                 </LinearLayout>
             </FrameLayout>
             <TextView
+                android:id="@+id/userName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="트윙크님을 위한\n아침먹는 습관 기르기에 관련된 글이에요!"
