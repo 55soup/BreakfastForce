@@ -5,6 +5,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.Manifest;
 import android.content.Context;
@@ -28,6 +29,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -38,11 +40,15 @@ public class Fragment1DiaryActivity extends AppCompatActivity {
 //    FloatingActionButton fab_btn;
     TextView dialog_id;
     final int GET_GALLERY_IMAGE = 200;
-    TextView title, content;
-    EditText edtContent;
+//    TextView title, content;
+    EditText edtTitle, edtContent;
 
+    String fileName;
+    String sdPath;
+    File myDir;
 
-
+    String edT;
+    String edC;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,9 +63,18 @@ public class Fragment1DiaryActivity extends AppCompatActivity {
         // fragment1 에서 받아온 값
         Intent intent = getIntent();
         String c = intent.getStringExtra("날짜");
-        String sdPath = intent.getStringExtra("경로");
+        String sc = intent.getStringExtra("경로");
         dialog_id = findViewById(R.id.dialog_id);
         dialog_id.setText(c);
+
+        sdPath = Environment.getExternalStorageDirectory().getAbsolutePath();
+        sdPath += "/myDiary/";
+        myDir = new File(sdPath);
+//        if (!myDir.isDirectory()) myDir.mkdir();
+
+        edtTitle = findViewById(R.id.edtTitle);
+        edtContent = findViewById(R.id.edtContent);
+
 
         // OK 버튼
         FloatingActionButton fab_btn = (FloatingActionButton) findViewById(R.id.fab_btn);
@@ -67,6 +82,27 @@ public class Fragment1DiaryActivity extends AppCompatActivity {
             @Override
             @RequiresApi(api = Build.VERSION_CODES.N)
             public void onClick(View v) {
+
+                // 폴더 생성
+                myDir.mkdir();
+                // 파일명 생성 (경로 + 해당 날짜)
+                fileName = sdPath + sc + ".txt";
+
+                try {
+                    FileOutputStream out = new FileOutputStream(fileName);
+                    edT = edtTitle.getText().toString();
+                    edC = edtContent.getText().toString();
+                    out.write(edT.getBytes());
+                    out.write(edC.getBytes());
+                    out.close();
+
+                    Toast.makeText(getApplicationContext(), fileName + " 에 저장됨", Toast.LENGTH_SHORT).show();
+
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
 
             }
         });

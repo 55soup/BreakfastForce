@@ -16,6 +16,7 @@
         tools:context=".Fragment1DiaryActivity">
 
         <LinearLayout
+            android:id="@+id/main"
             android:padding="15dp"
             android:orientation="vertical"
             android:layout_width="match_parent"

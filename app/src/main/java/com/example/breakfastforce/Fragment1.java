@@ -13,27 +13,27 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Calendar;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import org.w3c.dom.Text;
 
 
 public class Fragment1 extends Fragment {
     FloatingActionButton fab_btn;
 
-    ListView listview;
-    ListItemAdapter adapter;
-    final ArrayList<String> arrayList = new ArrayList<String>();
-    TextView userName;
+    TextView userName, title, content;
     Calendar myCalendar = Calendar.getInstance();
     Button clickBtn;
     outputUsername u1 =  new outputUsername(getContext());
+
+    String t, c;
 
     DatePickerDialog.OnDateSetListener myDatePicker = new DatePickerDialog.OnDateSetListener() {
         @Override
@@ -62,10 +62,16 @@ public class Fragment1 extends Fragment {
 
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.activity_fragment1, container, false);
+
+        title = v.findViewById(R.id.title);
+        content = v.findViewById(R.id.content);
+
+        // ---------------------------------- 날짜.txt 파일 리스트 불러오기 ----------------------------
+        // ---------------------------------- txt 파일 불러와서 카드뷰에 하나씩 넣기 ----------------------
+
         fab_btn = (FloatingActionButton) v.findViewById(R.id.fab_btn);
-        listview = (ListView) v.findViewById(R.id.listview);
         userName = (TextView) v.findViewById(R.id.userName);
-        adapter = new ListItemAdapter();
+
         // ---------------------------------- userName 설정 ----------------------------------
         try{
             FileInputStream inFs = getContext().openFileInput("user.txt");
