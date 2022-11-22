@@ -20,3 +20,8 @@ http://daplus.net/android-android-%EC%99%B8%EB%B6%80-%EC%A0%80%EC%9E%A5%EC%86%8C
 [출처](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=jcosmoss&logNo=220961054247)
 
 ![image](https://user-images.githubusercontent.com/87300199/201951098-b4d469a3-c39f-4237-bd4d-9169329f0d25.png)
+
+
+#### txt파일 입출력
+![image](https://recipes4dev.tistory.com/113)
+![image](https://codechacha.com/ko/android-read-write-file/)
