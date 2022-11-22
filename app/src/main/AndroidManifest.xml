@@ -21,7 +21,7 @@
             android:name=".AskThirdActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".StandbyscreenActivity"
             android:exported="true"
             tools:ignore="Instantiatable">
             <intent-filter>
@@ -68,6 +68,8 @@
             android:name=".Fragment4"
             android:exported="false"
             tools:ignore="Instantiatable" />
+        <activity android:name=".MainActivity"
+            android:exported="false"/>
     </application>
 
 </manifest>
