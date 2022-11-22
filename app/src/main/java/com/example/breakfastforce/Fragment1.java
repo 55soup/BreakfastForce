@@ -7,7 +7,11 @@ import android.os.Bundle;
 
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.os.Environment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,24 +20,31 @@ import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import org.jetbrains.annotations.Nullable;
 import org.w3c.dom.Text;
 
 
 public class Fragment1 extends Fragment {
     FloatingActionButton fab_btn;
 
-    TextView userName, title, content;
+    TextView userName;
     Calendar myCalendar = Calendar.getInstance();
-    Button clickBtn;
-    outputUsername u1 =  new outputUsername(getContext());
+//    outputUsername u1 =  new outputUsername(getContext());
 
-    String t, c;
+    // 리사이클러뷰
+    private RecyclerView recyclerView;
+    private CardViewAdaper adaper;
+    private ArrayList<ItemData> list = new ArrayList<>();
 
     DatePickerDialog.OnDateSetListener myDatePicker = new DatePickerDialog.OnDateSetListener() {
         @Override
@@ -54,20 +65,26 @@ public class Fragment1 extends Fragment {
 
 
     @Override
+    @Nullable
     @RequiresApi(api = Build.VERSION_CODES.M)
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-
-
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.activity_fragment1, container, false);
+        View v = (ViewGroup)inflater.inflate(R.layout.activity_fragment1, container, false);
 
-        title = v.findViewById(R.id.title);
-        content = v.findViewById(R.id.content);
+        // 리사이클러뷰
+        recyclerView = (RecyclerView) v.findViewById(R.id.my_recycler_view);
+
+        list = ItemData.createContactsList(5);
+        recyclerView.setHasFixedSize(true);
+        adaper = new CardViewAdaper(getActivity(), list);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView.setAdapter(adaper);
 
         // ---------------------------------- 날짜.txt 파일 리스트 불러오기 ----------------------------
         // ---------------------------------- txt 파일 불러와서 카드뷰에 하나씩 넣기 ----------------------
+
 
         fab_btn = (FloatingActionButton) v.findViewById(R.id.fab_btn);
         userName = (TextView) v.findViewById(R.id.userName);
@@ -95,6 +112,8 @@ public class Fragment1 extends Fragment {
 
             }
         });
+
+
         return v;
 
     }

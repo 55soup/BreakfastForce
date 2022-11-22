@@ -41,29 +41,14 @@
                     android:textColor="@color/black"/>
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/frag"
-                android:layout_marginTop="30dp"
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="50dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="제목"
-                    android:textStyle="bold"
-                    android:textSize="30dp"/>
-
-                <TextView
-                    android:id="@+id/content"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20dp"
-                    android:text="내용"/>
-
-            </LinearLayout>
+                android:layout_height="match_parent"
+                android:id="@+id/my_recycler_view"
+                android:overScrollMode="never">
+                <!--맨 아래에 도달하고 스크롤 할 요소가 없을 때 파란색 쉐도우 올라오는 기능-->
+            </androidx.recyclerview.widget.RecyclerView>
 
         </LinearLayout>
 

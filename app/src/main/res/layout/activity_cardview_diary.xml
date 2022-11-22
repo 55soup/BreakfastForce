@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="10dp"
-        android:background="@color/lightYellow">
+        android:background="#FFFFE1">
 
         <TextView
             android:id="@+id/date"
@@ -24,7 +24,14 @@
             android:layout_height="wrap_content"
             android:text="0000년 00월 00일"
             android:textSize="20dp"
-            android:backgroundTint="@color/lightYellow"
+            android:backgroundTint="#F1F1C1"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="제목"
             android:layout_marginBottom="10dp"/>
 
         <ImageView
