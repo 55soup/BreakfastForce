@@ -23,5 +23,5 @@ http://daplus.net/android-android-%EC%99%B8%EB%B6%80-%EC%A0%80%EC%9E%A5%EC%86%8C
 
 
 #### txt파일 입출력
-![image](https://recipes4dev.tistory.com/113)
-![image](https://codechacha.com/ko/android-read-write-file/)
+[image](https://recipes4dev.tistory.com/113)
+[image](https://codechacha.com/ko/android-read-write-file)
