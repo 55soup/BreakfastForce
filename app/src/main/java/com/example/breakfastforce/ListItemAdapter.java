@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -47,6 +48,11 @@ public class ListItemAdapter extends BaseAdapter {
         txtTitle.setText(listItem.getTitle());
         txtContent.setText(listItem.getContent());
         txtDate.setText(listItem.getDate());
+
+//        deleteItemCheckBox.setChecked(((ListView)parent).isItemChecked(position));
+//        deleteItemCheckBox.setFocusable(false);
+//        deleteItemCheckBox.setClickable(false);
+
         return convertView;
     }
 

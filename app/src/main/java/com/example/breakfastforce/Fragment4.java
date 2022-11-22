@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -60,6 +61,7 @@ public class Fragment4 extends Fragment {
         }
 
         // ---------------------------------- userName 설정 ----------------------------------
+
         fab_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,19 +71,36 @@ public class Fragment4 extends Fragment {
         });
         // btn_breakfast눌렀을 때 글 나오기
 
+        boolean[] isCheck = new boolean[50];
+
+        CheckBox bookmark = (CheckBox) v.findViewById(R.id.bookmark);
+
+        // https://asong-study-record.tistory.com/52
+        // http://lueseypid.tistory.com/14
+        // https://asong-study-record.tistory.com/52
+        // https://blog.naver.com/PostView.naver?blogId=hwa2ting3612&logNo=221218523364&redirect=Dlog&widgetTypeCall=true&directAccess=false
+
+
         /////////////////////////////////////////////////////////listview 관리
         adapter.addItem(new ListItem("아침을 먹어야하는 이유", "2020년 부터 매일 아침을 먹기로\n" +
                 "마음 먹었다. 그 뒤로 꾸준히 가리지않고\n" +
                 "일정한 시간 밥을 먹었다.", "2022.10.19"));
         adapter.addItem(new ListItem("가족과 함께 즐거운 아침", "2020년 부터 매일 아침을 먹기로\n" +
                 "마음 먹었다. 그 뒤로 꾸준히 가리지않고\n" +
-                "일정한 시간 밥을 먹었다.", "2022.10.19"));
+                "일정한 시간 밥을 먹었다.", "2022.10.22"));
         adapter.addItem(new ListItem("내가 자주 하는 아침 루틴", "아침에 일어나서 요가를 많이 한다.\n" +
                 "잠으로 찌뿌둥해진 몸도 많이 풀리고\n" +
-                "정신도 맑아지는 것 같다.\n", "2022.10.19"));
+                "정신도 맑아지는 것 같다.\n", "2022.11.19"));
+        adapter.addItem(new ListItem("상쾌한 아침을 보내는 방법, 어렵지 않아!!", "일어나자마자 창문을 연다.\n" +
+                "아침 공기를 맡으며 머리를 맑게해준다.\n" +
+                "새소리도 들으면서~ ㅎㅎ.\n", "2022.12.1"));
         listview.setAdapter(adapter);
         ////////////////////////////////////////////////////////
         //// 리스트뷰를 클릭했을 시
+
+
+
+
 
         return v;
 
