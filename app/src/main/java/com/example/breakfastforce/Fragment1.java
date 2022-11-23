@@ -20,9 +20,11 @@ import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -45,6 +47,10 @@ public class Fragment1 extends Fragment {
     private RecyclerView recyclerView;
     private CardViewAdaper adaper;
     private ArrayList<ItemData> list = new ArrayList<>();
+
+    //SD카드
+    String sdPath;
+    File myDir;
 
     DatePickerDialog.OnDateSetListener myDatePicker = new DatePickerDialog.OnDateSetListener() {
         @Override
@@ -76,13 +82,43 @@ public class Fragment1 extends Fragment {
         // 리사이클러뷰
         recyclerView = (RecyclerView) v.findViewById(R.id.my_recycler_view);
 
-        list = ItemData.createContactsList(5);
+        // sd카드 읽어오기
+        String externalState = Environment.getExternalStorageState();
+        if (externalState.equals(Environment.MEDIA_MOUNTED)) {
+            //외부 저장 장치가 마운트 되어서 읽어올 준비가 되었을 때
+            sdPath = Environment.getExternalStorageDirectory().getAbsolutePath()+"/myDiary/"; //일기가 있는 폴더 경로
+        } else {
+            //마운트 되지 않았을 때
+            sdPath = Environment.MEDIA_UNMOUNTED;
+        }
+        String result = "";
+        try {
+            // myDiary안에 파일들 다 가져오기
+            File[] sysFiles = (new File(sdPath).listFiles());
+            for (int i = 0; i < sysFiles.length; i++) {
+                String fileName =  sysFiles[i].getName().toString();
+                String dir = sdPath + fileName;
+                //파일에서 읽어오기 위한 스트림 객체
+                File file = new File(dir);
+                FileInputStream fis = new FileInputStream(file);
+                byte[] buffer = new byte[fis.available()]; //myDiary에 저장된 데이터 size리턴.
+                fis.read(buffer);
+                fis.close();
+                result = new String(buffer)
+                Log.i("결과: ", result);
+                list = ItemData.createContactsList(5, "", ""); //파일 갯수 만큼 item 생성
+            }
+        } catch (Exception e) {
+            Log.i("불러오기 실패", e.getMessage());
+        }
         recyclerView.setHasFixedSize(true);
         adaper = new CardViewAdaper(getActivity(), list);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adaper);
 
         // ---------------------------------- 날짜.txt 파일 리스트 불러오기 ----------------------------
+        StringBuilder text = new StringBuilder();
+
         // ---------------------------------- txt 파일 불러와서 카드뷰에 하나씩 넣기 ----------------------
 
 
@@ -112,7 +148,6 @@ public class Fragment1 extends Fragment {
 
             }
         });
-
 
         return v;
 

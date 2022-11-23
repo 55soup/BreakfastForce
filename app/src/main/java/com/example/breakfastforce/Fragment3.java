@@ -66,7 +66,8 @@ public class Fragment3 extends Fragment {
             @Override
             public void onClick(View v) {
                 try{
-                    Intent intent = getPackageManager().getLaunchIntentForPackage("com.sec.android.app.clockpackage");
+                    String packageName = "com.sec.android.app.clockpackage";
+                    Intent intent = getPackageManager().getLaunchIntentForPackage(packageName);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(intent);
                 }catch(Exception e){

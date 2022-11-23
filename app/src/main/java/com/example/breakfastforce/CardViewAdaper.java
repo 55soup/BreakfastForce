@@ -36,6 +36,7 @@ public class CardViewAdaper extends RecyclerView.Adapter<CardViewAdaper.Holder> 
     public void onBindViewHolder(Holder holder, int position) {
         // 각 위치에 문자열 세팅
         int itemposition = position;
+        holder.date.setText(list.get(itemposition).date_data);
         holder.title.setText(list.get(itemposition).title_data);
         holder.content.setText(list.get(itemposition).content_data);
     }
@@ -48,11 +49,13 @@ public class CardViewAdaper extends RecyclerView.Adapter<CardViewAdaper.Holder> 
 
     // ViewHolder는 하나의 View를 보존하는 역할을 한다
     public class Holder extends RecyclerView.ViewHolder{
+        public TextView date;
         public TextView title;
         public TextView content;
 
         public Holder(View view){
             super(view);
+            date = (TextView) view.findViewById(R.id.date);
             title = (TextView) view.findViewById(R.id.title);
             content = (TextView) view.findViewById(R.id.content);
         }

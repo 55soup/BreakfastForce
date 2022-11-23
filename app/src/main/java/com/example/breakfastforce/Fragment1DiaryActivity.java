@@ -90,13 +90,14 @@ public class Fragment1DiaryActivity extends AppCompatActivity {
 
                 try {
                     FileOutputStream out = new FileOutputStream(fileName);
-                    edT = edtTitle.getText().toString();
+                    edT = edtTitle.getText().toString() +"\n\n";
                     edC = edtContent.getText().toString();
                     out.write(edT.getBytes());
                     out.write(edC.getBytes());
                     out.close();
 
-                    Toast.makeText(getApplicationContext(), fileName + " 에 저장됨", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getApplicationContext(), fileName + " 에 저장됨", Toast.LENGTH_SHORT).show();
+                    finish();
 
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();

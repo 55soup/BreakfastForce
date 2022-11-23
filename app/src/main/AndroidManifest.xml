@@ -5,6 +5,7 @@
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
 
     <application
         android:requestLegacyExternalStorage="true"
@@ -15,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BreakfastForce">
         <activity
-            android:name=".AskMainActivity"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".AskThirdActivity"
@@ -30,6 +31,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".AskMainActivity"
+            android:exported="false" />
         <activity
             android:name=".AskSubActivity"
             android:exported="false" />
@@ -71,5 +75,6 @@
         <activity android:name=".MainActivity"
             android:exported="false"/>
     </application>
+
 
 </manifest>
