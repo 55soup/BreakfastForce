@@ -95,7 +95,6 @@ public class Fragment1DiaryActivity extends AppCompatActivity {
                     out.write(edT.getBytes());
                     out.write(edC.getBytes());
                     out.close();
-
 //                    Toast.makeText(getApplicationContext(), fileName + " 에 저장됨", Toast.LENGTH_SHORT).show();
                     finish();
 

@@ -14,12 +14,9 @@ public class ItemData {
     }
 
 
-    public static ArrayList<ItemData> createContactsList(int numContacts, String title_data, String content_data) {
+    public static ArrayList<ItemData> createContactsList(String date_data, String title_data, String content_data) {
         ArrayList<ItemData> contacs = new ArrayList<ItemData>();
-
-        for(int i = 0; i <= numContacts; i++) {
-            contacs.add(new ItemData("2022년 11월 23일","오늘의 맘마!!!!", "흑흑... 너무 맛잇어... 근데 내일 아침은 귀찮으니까 안 먹어야징~~~ 이라고 했다간 개발자한테 후두리맞겟지?ㅎㅎ"));
-        }
+        contacs.add(new ItemData(date_data ,title_data ,content_data));
 
         return contacs;
     }
