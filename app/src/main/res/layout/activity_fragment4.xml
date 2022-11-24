@@ -69,10 +69,11 @@
                 android:text="트윙크님을 위한\n아침먹는 습관 기르기에 관련된 글이에요!"
                 android:textSize="15dp"
                 android:padding="10dp"/>
-            <ListView
-                android:id="@+id/listview"
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/my_recycler"
                 android:layout_width="match_parent"
-                android:layout_height="700dp" />
+                android:layout_height="match_parent"/>
         </LinearLayout>
 
     </ScrollView>
