@@ -39,8 +39,8 @@ public class Fragment1DiaryActivity extends AppCompatActivity {
     Button photo1;
 //    FloatingActionButton fab_btn;
     TextView dialog_id;
+    TextView userName;
     final int GET_GALLERY_IMAGE = 200;
-//    TextView title, content;
     EditText edtTitle, edtContent;
 
     String fileName;
@@ -57,6 +57,7 @@ public class Fragment1DiaryActivity extends AppCompatActivity {
         // SD 사용 허가 
         ActivityCompat.requestPermissions(this, new String[]
                 {android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, MODE_PRIVATE);
+        userName = findViewById(R.id.userName);
 
         // SD 코드
         
@@ -107,6 +108,20 @@ public class Fragment1DiaryActivity extends AppCompatActivity {
             }
         });
 
+        //==========================userName설정===========================
+        try{
+            FileInputStream inFs = getApplicationContext().openFileInput("user.txt");
+            byte[] txt = new byte[30];
+            inFs.read(txt);
+            String user = new String(txt);
+            userName.setText(user);
+            inFs.close();
+        }catch(FileNotFoundException e){
+            e.printStackTrace();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        //==========================userName설정===========================
 
 
         btn_back = findViewById(R.id.btn_back);
