@@ -1,5 +1,8 @@
 package com.example.breakfastforce;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,23 +11,31 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.Manifest;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.text.Editable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import androidx.activity.result.ActivityResultLauncher;
 
+import com.bumptech.glide.Glide;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.io.File;
@@ -32,12 +43,14 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+
 import java.nio.charset.StandardCharsets;
 
 public class Fragment1DiaryActivity extends AppCompatActivity {
     ImageButton btn_back;
-    Button photo1;
-//    FloatingActionButton fab_btn;
+    ImageView photo1;
+    //    FloatingActionButton fab_btn;
     TextView dialog_id;
     TextView userName;
     final int GET_GALLERY_IMAGE = 200;
@@ -50,6 +63,8 @@ public class Fragment1DiaryActivity extends AppCompatActivity {
     String edT;
     String edC;
 
+    String imgFile;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,7 +75,7 @@ public class Fragment1DiaryActivity extends AppCompatActivity {
         userName = findViewById(R.id.userName);
 
         // SD 코드
-        
+
         // fragment1 에서 받아온 값
         Intent intent = getIntent();
         String c = intent.getStringExtra("날짜");
@@ -76,6 +91,7 @@ public class Fragment1DiaryActivity extends AppCompatActivity {
         edtTitle = findViewById(R.id.edtTitle);
         edtContent = findViewById(R.id.edtContent);
 
+        String imgName = sdPath + sc + ".png";
 
         // OK 버튼
         FloatingActionButton fab_btn = (FloatingActionButton) findViewById(R.id.fab_btn);
@@ -91,7 +107,7 @@ public class Fragment1DiaryActivity extends AppCompatActivity {
 
                 try {
                     FileOutputStream out = new FileOutputStream(fileName);
-                    edT = edtTitle.getText().toString() +"\n\n";
+                    edT = edtTitle.getText().toString() + "\n\n";
                     edC = edtContent.getText().toString();
                     out.write(edT.getBytes());
                     out.write(edC.getBytes());
@@ -109,16 +125,16 @@ public class Fragment1DiaryActivity extends AppCompatActivity {
         });
 
         //==========================userName설정===========================
-        try{
+        try {
             FileInputStream inFs = getApplicationContext().openFileInput("user.txt");
             byte[] txt = new byte[30];
             inFs.read(txt);
             String user = new String(txt);
             userName.setText(user);
             inFs.close();
-        }catch(FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
         //==========================userName설정===========================
@@ -132,19 +148,74 @@ public class Fragment1DiaryActivity extends AppCompatActivity {
             }
         });
 
-//        photo1 = findViewById(R.id.photo1);
-//        photo1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(Intent.ACTION_PICK);
-//                intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
-////                startActivityForResult(intent,GET_GALLERY_IMAGE);
-//            }
-//        });
+        // =======================이미지 불러오기================================ //
 
+        photo1 = findViewById(R.id.photo1);
+
+        try {
+            Bitmap bm = BitmapFactory.decodeFile(imgFile);
+
+            photo1.setImageBitmap(bm); // 내부 저장소에 저장된 이미지를 이미지뷰에 셋
+            Toast.makeText(getApplicationContext(), imgFile + "파일 로드 성공", Toast.LENGTH_LONG).show();
+        } catch (Exception e) {
+            Toast.makeText(getApplicationContext(), "파일 로드 실패", Toast.LENGTH_SHORT).show();
+        }
+
+        // 이미지뷰 누르면 선택 실행, 갤러리 오픈픈
+        photo1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setType("image/*");
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(intent, 101);
+                launcher.launch(intent);
+            }
+        });
     }
 
-    //파일 읽기 함수 따로 정의
+
+        ActivityResultLauncher<Intent> launcher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
+                new ActivityResultCallback<ActivityResult>() {
+                    @Override
+                    public void onActivityResult(ActivityResult result) {
+                        if (result.getResultCode() == RESULT_OK) {
+                            Intent intent = result.getData();
+                            Uri uri = intent.getData();
+////                            Glide.with(Fragment1DiaryActivity.this).load(uri).into(photo1);
+                            ContentResolver resolver = getContentResolver();
+                            try {
+                                InputStream instream = resolver.openInputStream(uri);
+                                Bitmap imgBitmap = BitmapFactory.decodeStream(instream);
+                                photo1.setImageBitmap(imgBitmap);    // 선택한 이미지 이미지뷰에 셋
+                                instream.close();   // 스트림 닫아주기
+                                saveBitmapToJpeg(imgBitmap);    // 내부 저장소에 저장
+                                Intent in = new Intent(getApplication(), Fragment1.class);
+                                in.putExtra("img", imgBitmap);
+                                startActivity(in);
+
+                            } catch (Exception e) {
+                            }
+                        }
+                    }
+                });
+
+        public void saveBitmapToJpeg(Bitmap bitmap) {   // 선택한 이미지 내부 저장소에 저장
+            File tempFile = new File(sdPath);    // 파일 경로와 이름 넣기
+            try {
+                tempFile.createNewFile();   // 자동으로 빈 파일을 생성하기
+                FileOutputStream out = new FileOutputStream(tempFile);  // 파일을 쓸 수 있는 스트림을 준비하기
+                bitmap.compress(Bitmap.CompressFormat.PNG, 100, out);   // compress 함수를 사용해 스트림에 비트맵을 저장하기
+                out.close();    // 스트림 닫아주기
+            } catch (Exception e) {
+            }
+        }
+
+
+
+
+
+        //파일 읽기 함수 따로 정의
 //    String readDiary(String fname) {
 //        String diaryData = null;//일기 내용 저장하는 변수
 //        try {
@@ -157,4 +228,4 @@ public class Fragment1DiaryActivity extends AppCompatActivity {
 //        }
 //        return diaryData;
 //    }
-}
+    }

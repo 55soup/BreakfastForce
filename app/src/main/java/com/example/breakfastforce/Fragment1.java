@@ -1,7 +1,10 @@
 package com.example.breakfastforce;
 
 import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.media.Image;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -11,12 +14,15 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Environment;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -93,6 +99,7 @@ public class Fragment1 extends Fragment {
             //마운트 되지 않았을 때
             sdPath = Environment.MEDIA_UNMOUNTED;
         }
+
         String result = "";
         String title = "";
         String content = "";
@@ -113,6 +120,7 @@ public class Fragment1 extends Fragment {
                 String[] resultSplit = result.split("\n\n"); //제목과 내용 구분
                 title = resultSplit[0]; //제목
                 content = resultSplit[1]; //내용
+
                 list.add(new ItemData(fileName.replace(".txt","").replace("_","/"),title, content)); //파일 갯수 만큼 item 생성)
             }
         } catch (Exception e) {
@@ -130,7 +138,7 @@ public class Fragment1 extends Fragment {
 
         // ---------------------------------- txt 파일 불러와서 카드뷰에 하나씩 넣기 ----------------------
 
-
+        // 리스트뷰 클릭하면 다이얼로그 뜨게
 
 
         // ---------------------------------- userName 설정 ----------------------------------
@@ -159,4 +167,5 @@ public class Fragment1 extends Fragment {
         return v;
 
     }
+
 }

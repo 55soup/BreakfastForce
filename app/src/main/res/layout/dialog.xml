@@ -12,9 +12,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
         android:padding="10dp"
-        android:background="@android:color/white"
-        tools:context=".Fragment1DiaryActivity">
-
+        android:background="@android:color/white">
         <LinearLayout
             android:id="@+id/main"
             android:padding="15dp"
@@ -74,24 +72,15 @@
                     android:id="@+id/dialog_id"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="년 / 월 / 일"
+                    android:text="2022/11/29"
                     android:textStyle="bold"
                     android:layout_marginBottom="10dp"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="제목 입력"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@color/black"
-                    android:textSize="13dp"
-                    android:id="@+id/title"/>
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:padding="8dp"
-                    android:text=""
+                    android:text="오늘의 점심"
                     android:gravity="center_vertical"
                     android:layout_marginTop="10dp"
                     android:textColor="@color/black"
@@ -114,7 +103,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:padding="8dp"
-                    android:text=""
+                    android:text="사실 오늘 아침이다. 오늘 아침은 최고의 밥이었다. 냠냠쩌ㅃ쩝 최고악의 나트륨 소금을 뿌린 밥을 머겅ㅆ다. 키키"
                     android:gravity="top"
                     android:layout_marginTop="10dp"
                     android:textColor="@color/black"
@@ -134,21 +123,25 @@
                     android:id="@+id/photo"/>
 
 
+<!--                <ImageView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="200dp"-->
+<!--                    android:padding="8dp"-->
+<!--                    android:text=""-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="11dp"-->
+<!--                    android:backgroundTint="#E6F3DA"-->
+<!--                    android:background="@drawable/sandwich"/>-->
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:padding="8dp"
-                    android:text=""
-                    android:gravity="center_vertical"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@color/black"
-                    android:textSize="11dp"
-                    android:backgroundTint="#E6F3DA"
-                    android:background="@drawable/camera"
-                    android:id="@+id/photo1"/>
+                    android:background="@drawable/toast_egg"/>
 
             </LinearLayout>
-            </LinearLayout>
+        </LinearLayout>
 
     </ScrollView>
 
